@@ -1,0 +1,55 @@
+{
+  "reproducibility": {
+    "under_qiskit_2.4.2": "2/42",
+    "under_legacy_0.45": "19/42",
+    "deterministic_used": 12,
+    "crash": 7,
+    "silent_output": 5
+  },
+  "per_model": {
+    "gpt-4o-mini": {
+      "B0": 2,
+      "B2": 2,
+      "B4": 2
+    },
+    "gpt-4o": {
+      "B0": 2,
+      "B2": 4,
+      "B4": 3
+    },
+    "claude-haiku-4-5": {
+      "B0": 3,
+      "B2": 4,
+      "B4": 5
+    },
+    "claude-sonnet-4-6": {
+      "B0": 5,
+      "B2": 3,
+      "B4": 3
+    }
+  },
+  "pooled_B2_B0": {
+    "n": 48,
+    "diff": 0.021,
+    "ci": [
+      -0.104,
+      0.146
+    ],
+    "mcnemar_p": 1.0,
+    "wl": [
+      5,
+      4
+    ]
+  },
+  "sonnet_B2_B0": -2,
+  "strong_silent_anchoring": {
+    "B0": 4,
+    "B2": 0,
+    "n": 10
+  },
+  "crash_runnability": {
+    "B0": 7,
+    "B2": 12,
+    "n": 28
+  }
+}

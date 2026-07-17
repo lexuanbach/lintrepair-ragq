@@ -1,0 +1,119 @@
+{
+  "gpt-4o-mini": {
+    "B0": 7,
+    "B2": 7,
+    "n": 8,
+    "per_bug": {
+      "bell_cz_for_cx": {
+        "B0": true,
+        "B2": true
+      },
+      "ghz_missing_cnot": {
+        "B0": true,
+        "B2": true
+      },
+      "rot_wrong_angle": {
+        "B0": true,
+        "B2": true
+      },
+      "swapped_ctrl_target": {
+        "B0": true,
+        "B2": true
+      },
+      "wrong_axis_rx_ry": {
+        "B0": false,
+        "B2": false
+      },
+      "phase_missing_s": {
+        "B0": true,
+        "B2": true
+      },
+      "w3_wrong_first_rot": {
+        "B0": true,
+        "B2": true
+      },
+      "cnot_chain_wrong_target": {
+        "B0": true,
+        "B2": true
+      }
+    }
+  },
+  "gpt-4o": {
+    "B0": 8,
+    "B2": 8,
+    "n": 8,
+    "per_bug": {
+      "bell_cz_for_cx": {
+        "B0": true,
+        "B2": true
+      },
+      "ghz_missing_cnot": {
+        "B0": true,
+        "B2": true
+      },
+      "rot_wrong_angle": {
+        "B0": true,
+        "B2": true
+      },
+      "swapped_ctrl_target": {
+        "B0": true,
+        "B2": true
+      },
+      "wrong_axis_rx_ry": {
+        "B0": true,
+        "B2": true
+      },
+      "phase_missing_s": {
+        "B0": true,
+        "B2": true
+      },
+      "w3_wrong_first_rot": {
+        "B0": true,
+        "B2": true
+      },
+      "cnot_chain_wrong_target": {
+        "B0": true,
+        "B2": true
+      }
+    }
+  },
+  "claude-sonnet-4-6": {
+    "B0": 8,
+    "B2": 8,
+    "n": 8,
+    "per_bug": {
+      "bell_cz_for_cx": {
+        "B0": true,
+        "B2": true
+      },
+      "ghz_missing_cnot": {
+        "B0": true,
+        "B2": true
+      },
+      "rot_wrong_angle": {
+        "B0": true,
+        "B2": true
+      },
+      "swapped_ctrl_target": {
+        "B0": true,
+        "B2": true
+      },
+      "wrong_axis_rx_ry": {
+        "B0": true,
+        "B2": true
+      },
+      "phase_missing_s": {
+        "B0": true,
+        "B2": true
+      },
+      "w3_wrong_first_rot": {
+        "B0": true,
+        "B2": true
+      },
+      "cnot_chain_wrong_target": {
+        "B0": true,
+        "B2": true
+      }
+    }
+  }
+}

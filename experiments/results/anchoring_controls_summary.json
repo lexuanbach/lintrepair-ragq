@@ -1,0 +1,41 @@
+{
+  "silent_n": 9,
+  "clustered": {
+    "pooled_B2_B0": 0.193,
+    "clustered_ci": [
+      0.077,
+      0.307
+    ],
+    "mixed_logodds": 1.29,
+    "mixed_ci_logodds": [
+      1.021,
+      1.559
+    ],
+    "mixed_OR": 3.63
+  },
+  "Sonnet": {
+    "B0": 9,
+    "B0filler": 6,
+    "B2": 6,
+    "B2irrel": 5,
+    "B2static": 5,
+    "B2noassert": 4,
+    "B4": 8
+  },
+  "Haiku": {
+    "B0": 7,
+    "B0filler": 3,
+    "B2": 4,
+    "B2irrel": 6,
+    "B2static": 2,
+    "B2noassert": 4,
+    "B4": 6
+  },
+  "passk_sonnet_silent": {
+    "B0_pass1": 8,
+    "B0_pass5": 9,
+    "B2_pass1": 5,
+    "B2_pass5": 6,
+    "n": 9
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "validated": [
+    {
+      "id": "so:72413224",
+      "source": "stackoverflow",
+      "url": "https://stackoverflow.com/questions/72413224/i-am-getting-no-memory-for-the-experiment-error-although-i-dont-see-any-mistak",
+      "title": "I am getting &#39;No memory for the experiment&#39; error although i dont see any mistake",
+      "buggy": "from qiskit.providers.aer import QasmSimulator\n# Create a quantum circuit\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\n# Get the Qasm simulator and set the backend options\naer_qasm_simulator = Aer.get_backend('qasm_simulator')\n# Set the backend options, method set to statevector\noptions = {'method': 'statevector', 'memory' : True, 'shots':10}\n# Execute circuit using the backend options created\njob = execute(qc, backend_simulator, backend_options=options)\nresult = job.result()\n# Pull the memory slots for the circuit\nmemory = result.get_memory(qc)\n# Print the results from the memory slots\nprint('Memory results: ', memory)```",
+      "fixed": "from qiskit import QuantumCircuit, Aer, transpile\nfrom qiskit.providers.aer import QasmSimulator\n\n# Create a quantum circuit\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\n\n# Get the statevector simulator\naer_simulator_statevector = Aer.get_backend('aer_simulator_statevector')\n\n# Transpile for the backend. Strictly speacking, not necesary in this case\nqc = transpile(qc, aer_simulator_statevector)\n\n# Pull the memory slots for the circuit\nresult = aer_simulator_statevector.run(qc, shots=10, memory=True).result()\nmemory = result.get_memory(qc)\n\n# Print the results from the memory slots\nprint('Memory results: ', memory)",
+      "verdict": "crash",
+      "env": "qiskit0.45",
+      "reference_stdout": "Memory results:  ['00', '00', '11', '11', '11', '11', '00', '00', '11', '11']"
+    },
+    {
+      "id": "gh:shlok926/q-refine@7336027e88#0",
+      "source": "github",
+      "url": "https://github.com/shlok926/q-refine/commit/7336027e88d04a8a29f14b578e32ea3dea25f7bf",
+      "title": "fix: Wrap execution code to fix import error in Streamlit",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit_aer import AerSimulator\nfrom qiskit.visualization import circuit_drawer\n\n\ndef grover_algorithm():\n    qc = QuantumCircuit(2, 2)\n\n    # Step 1: Initialize superposition\n    qc.h([0, 1])\n\n    # Step 2: Oracle (mark |11>)\n    qc.cz(0, 1)\n\n    # Step 3: Diffusion operator\n    qc.h([0, 1])\n    qc.x([0, 1])\n    qc.cz(0, 1)\n    qc.x([0, 1])\n    qc.h([0, 1])\n\n    # Step 4: Measurement\n    qc.measure([0, 1], [0, 1])\n\n    return qc\n\n\n# -------- RUN --------\ncircuit = grover_algorithm()\n\n# Save circuit diagram\ncircuit_drawer(circuit, output=\"mpl\", filename=\"grover_circuit.png\")\n\n# Run simulation\nbackend = AerSimulator()\nresult = backend.run(circuit, shots=1024).result()\ncounts = result.get_counts()\n\nprint(\"Grover measurement result:\", counts)\n",
+      "fixed": "from qiskit import QuantumCircuit\nfrom qiskit_aer import AerSimulator\nfrom qiskit.visualization import circuit_drawer\n\n\ndef grover_algorithm():\n    qc = QuantumCircuit(2, 2)\n\n    # Step 1: Initialize superposition\n    qc.h([0, 1])\n\n    # Step 2: Oracle (mark |11>)\n    qc.cz(0, 1)\n\n    # Step 3: Diffusion operator\n    qc.h([0, 1])\n    qc.x([0, 1])\n    qc.cz(0, 1)\n    qc.x([0, 1])\n    qc.h([0, 1])\n\n    # Step 4: Measurement\n    qc.measure([0, 1], [0, 1])\n\n    return qc\n\n\nif __name__ == \"__main__\":\n    # -------- RUN --------\n    circuit = grover_algorithm()\n    \n    # Save circuit diagram (requires pylatexenc)\n    # circuit_drawer(circuit, output=\"mpl\", filename=\"grover_circuit.png\")\n    \n    # Run simulation\n    backend = AerSimulator()\n    result = backend.run(circuit, shots=1024).result()\n    counts = result.get_counts()\n    \n    print(\"Grover measurement result:\", counts)\n",
+      "verdict": "crash",
+      "env": "qiskit2.4.2",
+      "reference_stdout": "Grover measurement result: {'11': 1024}"
+    },
+    {
+      "id": "gh:shlok926/q-refine@7336027e88#1",
+      "source": "github",
+      "url": "https://github.com/shlok926/q-refine/commit/7336027e88d04a8a29f14b578e32ea3dea25f7bf",
+      "title": "fix: Wrap execution code to fix import error in Streamlit",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit_aer import AerSimulator\nfrom qiskit.visualization import circuit_drawer\n\n\ndef simon_algorithm(secret_string):\n    n = len(secret_string)\n    qc = QuantumCircuit(2 * n, n)\n\n    # Step 1: Hadamard on first register\n    for i in range(n):\n        qc.h(i)\n\n    # Step 2: Oracle (simple simulated oracle)\n    for i, bit in enumerate(secret_string):\n        if bit == '1':\n            qc.cx(i, i + n)\n\n    # Step 3: Hadamard again on first register\n    for i in range(n):\n        qc.h(i)\n\n    # Step 4: Measurement\n    qc.measure(range(n), range(n))\n\n    return qc\n\n\n# -------- RUN --------\nsecret = \"1011\"\ncircuit = simon_algorithm(secret)\n\n# Save circuit diagram\ncircuit_drawer(circuit, output=\"mpl\", filename=\"simon_circuit.png\")\n\n# Run simulation\nbackend = AerSimulator()\nresult = backend.run(circuit, shots=1024).result()\ncounts = result.get_counts()\n\nprint(\"Secret string:\", secret)\nprint(\"Measurement result:\", counts)\n\n",
+      "fixed": "from qiskit import QuantumCircuit\nfrom qiskit_aer import AerSimulator\nfrom qiskit.visualization import circuit_drawer\n\n\ndef simon_algorithm(secret_string):\n    n = len(secret_string)\n    qc = QuantumCircuit(2 * n, n)\n\n    # Step 1: Hadamard on first register\n    for i in range(n):\n        qc.h(i)\n\n    # Step 2: Oracle (simple simulated oracle)\n    for i, bit in enumerate(secret_string):\n        if bit == '1':\n            qc.cx(i, i + n)\n\n    # Step 3: Hadamard again on first register\n    for i in range(n):\n        qc.h(i)\n\n    # Step 4: Measurement\n    qc.measure(range(n), range(n))\n\n    return qc\n\n\nif __name__ == \"__main__\":\n    # -------- RUN --------\n    secret = \"1011\"\n    circuit = simon_algorithm(secret)\n    \n    # Save circuit diagram\n    # circuit_drawer(circuit, output=\"mpl\", filename=\"simon_circuit.png\")\n    \n    # Run simulation\n    backend = AerSimulator()\n    result = backend.run(circuit, shots=1024).result()\n    counts = result.get_counts()\n    \n    print(\"Secret string:\", secret)\n    print(\"Measurement result:\", counts)\n\n",
+      "verdict": "crash",
+      "env": "qiskit2.4.2",
+      "reference_stdout": "Secret string: 1011\nMeasurement result: {'1101': 119, '0001': 133, '0100': 132, '1001': 129, '0000': 140, '0101': 124, '1100': 123, '1000': 124}"
+    }
+  ],
+  "seen": [
+    "so:78799576",
+    "so:76369957",
+    "so:76084475",
+    "so:75162746",
+    "so:72413224",
+    "so:67362847",
+    "so:66180030",
+    "so:57819419",
+    "so:52701261",
+    "gh:shlok926/q-refine@7336027e88#0",
+    "gh:shlok926/q-refine@7336027e88#1",
+    "gh:Ziadt160/qiskit-migration-assistant@544002a0e9#1",
+    "gh:Ziadt160/qiskit-migration-assistant@3b4763b73e#1",
+    "gh:amazon-braket/qiskit-braket-provider@1c91d0b595#1",
+    "gh:oluchiolebuike/QuantaVeil@9447d69415#0",
+    "gh:oluchiolebuike/QuantaVeil@7aa86ebdf7#0",
+    "gh:oluchiolebuike/QuantaVeil@efc6abfab0#0"
+  ],
+  "stats": {
+    "candidates": 17,
+    "so": 9,
+    "github": 8,
+    "crash": 3,
+    "silent": 0,
+    "nonrepro": 11,
+    "equiv": 3,
+    "error": 0
+  }
+}

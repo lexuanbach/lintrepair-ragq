@@ -1,0 +1,122 @@
+[
+  {
+    "id": "b4q-1",
+    "src_id": 1,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import QuantumCircuit\n\nqc = QuantumCircuit(3)\nqc.cx(0, 1, label='Label', ctrl_state=0)\nqc.ccx(0, 1, 2, label='Label', ctrl_state=1)\n",
+    "fixed": "from qiskit import QuantumCircuit\n\nqc = QuantumCircuit(3)\nqc.cx(0, 1, ctrl_state='0')\nqc.ccx(0, 1, 2, ctrl_state='00')\n",
+    "ref_stdout": "",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-5",
+    "src_id": 5,
+    "bug_type": "Output Wrong",
+    "kind": "output",
+    "buggy": "from qiskit import *\n#backend = Aer.get_backend('qasm_simulator_py')\n\nqasm = '''OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[1];\ncreg c[1];\nmeasure q -> c;'''\nqc = QuantumCircuit()\nqc.from_qasm_str(qasm)\n\nprint( qc.qasm() )\n",
+    "fixed": "from qiskit import *\n\n\nqasm = '''OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[1];\ncreg c[1];\nmeasure q -> c;'''\nqc = QuantumCircuit.from_qasm_str(qasm)\n\nprint( qc.qasm() )\n\n\n",
+    "ref_stdout": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[1];\ncreg c[1];\nmeasure q[0] -> c[0];\n\n",
+    "buggy_rc": 0
+  },
+  {
+    "id": "b4q-7",
+    "src_id": 7,
+    "bug_type": "Output Wrong",
+    "kind": "output",
+    "buggy": "from qiskit import QuantumRegister, QuantumCircuit\nfrom qiskit.converters import dag_to_circuit, circuit_to_dag\nfrom qiskit.circuit import ControlledGate\nfrom qiskit.dagcircuit import DAGCircuit\n\nqr = QuantumRegister(4, 'qr')\nghz_circuit = QuantumCircuit(3, name='ghz')\nghz_circuit.h(0)\nghz_circuit.cx(0, 1)\nghz_circuit.cx(1, 2)\nghz = ghz_circuit.to_gate()\ncghz = ghz.control(1)\ncircuit = QuantumCircuit(qr)\ncircuit.append(cghz, [3, 1, 0, 2])\n\nprint(circuit)\n\ndag = circuit_to_dag(circuit)\nfor node in dag.topological_op_nodes():\n    if isinstance(node.op, ControlledGate):\n        controlled_qubits = node.qargs[:node.op.num_ctrl_qubits]\n        unctl_dag = DAGCircuit()\n        for qreg in dag.qregs.values():\n            unctl_dag.add_qreg(qreg)\n\n        unctl_dag = DAGCircuit()\n        for qreg in dag.qregs.values():\n            unctl_dag.add_qreg(qreg)\n        unctl_dag.apply_operation_back(node.op.base_gate,\n                                       node.qargs[node.op.num_ctrl_qubits:],\n                                       node.op.params)\n        print(dag_to_circuit(unctl_dag))\n        dag.substitute_node_with_dag(node, unctl_dag)\n\nprint(dag_to_circuit(dag))\n",
+    "fixed": "from qiskit import QuantumRegister, QuantumCircuit\nfrom qiskit.converters import dag_to_circuit, circuit_to_dag\nfrom qiskit.circuit import ControlledGate\nfrom qiskit.dagcircuit import DAGCircuit\n\nqr = QuantumRegister(4, 'qr')\nghz_circuit = QuantumCircuit(3, name='ghz')\nghz_circuit.h(0)\nghz_circuit.cx(0, 1)\nghz_circuit.cx(1, 2)\nghz = ghz_circuit.to_gate()\ncghz = ghz.control(1)\ncircuit = QuantumCircuit(qr)\ncircuit.append(cghz, [3, 1, 0, 2])\n\nprint(circuit)\n\ndag = circuit_to_dag(circuit)\nfor node in dag.topological_op_nodes():\n    if isinstance(node.op, ControlledGate):\n        controlled_qubits = node.qargs[:node.op.num_ctrl_qubits]\n        unctl_dag = DAGCircuit()\n        for qreg in dag.qregs.values():\n            unctl_dag.add_qreg(qreg)\n\n        unctl_dag = DAGCircuit()\n        for qreg in dag.qregs.values():\n            unctl_dag.add_qreg(qreg)\n        unctl_dag.apply_operation_back(node.op.base_gate,\n                               qr[node.op.num_ctrl_qubits:],\n                               node.op.params)\n        print(dag_to_circuit(unctl_dag))\n        dag.substitute_node_with_dag(node, unctl_dag)\n\nprint(dag_to_circuit(dag))\n\n",
+    "ref_stdout": "      \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2510\nqr_0: \u25241     \u251c\n      \u2502      \u2502\nqr_1: \u25240 ghz \u251c\n      \u2502      \u2502\nqr_2: \u25242     \u251c\n      \u2514\u2500\u2500\u252c\u2500\u2500\u2500\u2518\nqr_3: \u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\n              \n              \nqr_0: \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n      \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2510\nqr_1: \u25240     \u251c\n      \u2502      \u2502\nqr_2: \u25241 ghz \u251c\n      \u2502      \u2502\nqr_3: \u25242     \u251c\n      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n      \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2510\nqr_0: \u25241     \u251c\n      \u2502      \u2502\nqr_1: \u25240 ghz \u251c\n      \u2502      \u2502\nqr_2: \u25242     \u251c\n      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nqr_3: \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n              \n",
+    "buggy_rc": 0
+  },
+  {
+    "id": "b4q-11",
+    "src_id": 11,
+    "bug_type": "Output Wrong",
+    "kind": "output",
+    "buggy": "from qiskit.circuit import QuantumCircuit, Parameter\nfrom qiskit.circuit.library import EfficientSU2\ncircuit = EfficientSU2(1)\nx = Parameter(\"x\")\ncircuit.global_phase = x\ncircuit.assign_parameters({x: 0.001}, inplace=True)\nprint(circuit.parameters)\nprint(circuit.global_phase)\n",
+    "fixed": "from qiskit.circuit import QuantumCircuit, Parameter\nfrom qiskit.circuit.library import EfficientSU2\ncircuit = EfficientSU2(1)\nx = Parameter(\"x\")\ncircuit.global_phase = x\nbound_circuit = circuit.assign_parameters({x: 0.001}, inplace=False)\nprint(circuit.parameters)\nprint(circuit.global_phase)\n",
+    "ref_stdout": "ParameterView([Parameter(x), ParameterVectorElement(\u03b8[0]), ParameterVectorElement(\u03b8[1]), ParameterVectorElement(\u03b8[2]), ParameterVectorElement(\u03b8[3]), ParameterVectorElement(\u03b8[4]), ParameterVectorElement(\u03b8[5]), ParameterVectorElement(\u03b8[6]), ParameterVectorElement(\u03b8[7])])\nx\n",
+    "buggy_rc": 0
+  },
+  {
+    "id": "b4q-13",
+    "src_id": 13,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import QuantumCircuit\nqc = QuantumCircuit(3)\n\nouter_level = QuantumCircuit(2, name='outer')\ninner_level = QuantumCircuit(2, name='inner')\ninner_level.x(0)\nouter_level.append(inner_level, [0,1])\n\nqc.append(outer_level.control(), [0,1,2])\n",
+    "fixed": "from qiskit import QuantumCircuit\nqc = QuantumCircuit(3)\n\nouter_level = QuantumCircuit(2, name='outer')\ninner_level = QuantumCircuit(2, name='inner')\ninner_level.x(0)\nouter_level.append(inner_level.to_gate(), [0,1])\n\nqc.append(outer_level.control(), [0,1,2])\n",
+    "ref_stdout": "",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-16",
+    "src_id": 16,
+    "bug_type": "Output Wrong",
+    "kind": "output",
+    "buggy": "from qiskit import *\n\nqr = QuantumRegister(5,'qr')\ncr = ClassicalRegister(5, 'cr')\nghz = QuantumCircuit(qr, cr)\n\nghz.h(qr[0])\nghz.cx(qr[0],qr[1])\nghz.cx(qr[1],qr[2])\nghz.cx(qr[2],qr[3])\nghz.cx(qr[3],qr[4])\nghz.barrier(qr)\nghz.measure(qr,cr)\nghz.draw()\n\nsim_backend = BasicAer.get_backend('statevector_simulator')\nsim_result = execute(ghz, sim_backend).result()\nprint(sim_result.get_statevector(0))\n",
+    "fixed": "from qiskit import *\n\nqr = QuantumRegister(5,'qr')\ncr = ClassicalRegister(5, 'cr')\nghz = QuantumCircuit(qr, cr)\n\nghz.h(qr[0])\nghz.cx(qr[0],qr[1])\nghz.cx(qr[1],qr[2])\nghz.cx(qr[2],qr[3])\nghz.cx(qr[3],qr[4])\nghz.barrier(qr)\nghz.draw()\n\nsim_backend = BasicAer.get_backend('statevector_simulator')\nsim_result = execute(ghz, sim_backend).result()\nprint(sim_result.get_statevector(0))\n",
+    "ref_stdout": "[0.70710678+0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.        +0.j\n 0.        +0.j 0.        +0.j 0.        +0.j 0.70710678+0.j]\n",
+    "buggy_rc": 0
+  },
+  {
+    "id": "b4q-28",
+    "src_id": 28,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import *\n\ncircuit = QuantumCircuit(1)\ncircuit.iden(0)\nprint(circuit)\n",
+    "fixed": "from qiskit import *\n\ncircuit = QuantumCircuit(1)\ncircuit.id(0)\nprint(circuit)\n",
+    "ref_stdout": "   \u250c\u2500\u2500\u2500\u2510\nq: \u2524 I \u251c\n   \u2514\u2500\u2500\u2500\u2518\n",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-31",
+    "src_id": 31,
+    "bug_type": "Output Wrong",
+    "kind": "output",
+    "buggy": "from qiskit import(\n  QuantumCircuit,\n  execute,\n  Aer)\nfrom qiskit.visualization import plot_histogram\n\n# Use Aer's qasm_simulator\nsimulator = Aer.get_backend('qasm_simulator')\n\n# Create a Quantum Circuit acting on the q register\ncircuit = QuantumCircuit(3, 3)\n\n# Add a X gate on qubit 0\ncircuit.x(0)\n\n# Add a CX (CNOT) gate on control qubit 0 and target qubit 1\ncircuit.cx(0, 1)\n\ncircuit.barrier()\n# Map the quantum measurement to the classical bits\ncircuit.measure([0,1,2], [0,1,2])\n\n# Execute the circuit on the qasm simulator\njob = execute(circuit, simulator, shots=1000)\n\n# Grab results from the job\nresult = job.result()\n\n# Returns counts\ncounts = result.get_counts(circuit)\nprint(\"\\nTotal count:\",counts)\n\n# Draw the circuit\ncircuit.draw()\n",
+    "fixed": "from qiskit import(\n  QuantumCircuit,\n  execute,\n  Aer)\nfrom qiskit.visualization import plot_histogram\n\n# Use Aer's qasm_simulator\nsimulator = Aer.get_backend('qasm_simulator')\n\n# Create a Quantum Circuit acting on the q register\ncircuit = QuantumCircuit(3, 3)\n\n# Add a X gate on qubit 0\ncircuit.x(0)\n\n# Add a CX (CNOT) gate on control qubit 0 and target qubit 1\ncircuit.cx(0, 1)\n\ncircuit.barrier()\n# Map the quantum measurement to the classical bits\ncircuit.measure([0,1,2], [2,1,0])\n\n# Execute the circuit on the qasm simulator\njob = execute(circuit, simulator, shots=1000)\n\n# Grab results from the job\nresult = job.result()\n\n# Returns counts\ncounts = result.get_counts(circuit)\nprint(\"\\nTotal count:\",counts)\n\n# Draw the circuit\ncircuit.draw()\n",
+    "ref_stdout": "\nTotal count: {'110': 1000}\n",
+    "buggy_rc": 0
+  },
+  {
+    "id": "b4q-33",
+    "src_id": 33,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import *\n#definitions\nq = QuantumRegister(1)\nc = ClassicalRegister(2)\nqc = QuantumCircuit(q,c)\n\n# building the circuit\nqc.h(q)\nqc.measure(q[0],c[0])\nqc.x(q[0]).c[0]_if(c[0], 0)\nqc.measure(q[0],c[1])\ncircuit_drawer(qc)\n",
+    "fixed": "from qiskit import *\nfrom qiskit.visualization import circuit_drawer\n#definitions\nc = [ ClassicalRegister(1) for _ in range(2) ]\nq = QuantumRegister(1)\nqc = QuantumCircuit(q)\nfor register in c:\n    qc.add_register( register )\n    qc.h(q)\nqc.measure(q,c[0])\nqc.x(q[0]).c_if(c[0], 0)\nqc.measure(q,c[1])\ncircuit_drawer(qc)\n",
+    "ref_stdout": "",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-36",
+    "src_id": 36,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "#from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit\n#from qiskit.extensions.standard import RXGate, RYGate, RZGate, U3Gate\n#from qiskit.extensions.simulator import wait\nfrom qiskit.extensions.simulator import *\nfrom qiskit import *\n\n\nfrom qiskit import execute, BasicAer, Aer\n\nqubit = QuantumRegister(1, 'qubit')\ncircuit = QuantumCircuit(qubit)\n\ncircuit.x(qubit)\ncircuit.wait(1e-6, qubit)\ncircuit.rx(3.1416, qubit)\n\nbackend = Aer.get_backend('statevector_simulator')\njob = execute(circuit, backend)\nresult = job.result()\noutputstate = result.get_statevector(circuit, decimals=3)\nprint(outputstate)\n",
+    "fixed": "from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit\nfrom qiskit import *\n\n\n\nfrom qiskit import execute, BasicAer, Aer\n\nqubit = QuantumRegister(1, 'qubit')\ncircuit = QuantumCircuit(qubit)\n\ncircuit.x(qubit)\ncircuit.barrier(qubit)\ncircuit.id(qubit)\ncircuit.barrier(qubit)\ncircuit.rx(3.1416, qubit)\n\nbackend = Aer.get_backend('statevector_simulator')\njob = execute(circuit, backend)\nresult = job.result()\noutputstate = result.get_statevector(circuit, decimals=3)\nprint(outputstate)\n",
+    "ref_stdout": "Statevector([ 0.-1.j, -0.+0.j],\n            dims=(2,))\n",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-37",
+    "src_id": 37,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit\nfrom qiskit import Aer, compile\nfrom qiskit.backends.jobstatus import JOB_FINAL_STATES\n\nn_qubits = 5\nqc_list = []\nfor i in range(n_qubits):\n    qr = QuantumRegister(n_qubits)\n    cr = ClassicalRegister(n_qubits)\n    qc = QuantumCircuit(qr, cr)\n    qc.x(qr[i])\n    qc.measure(qr, cr)\n    qc_list.append(qc)\n\nbackend = Aer.get_backend('qasm_simulator')\nqobj_list = [compile(qc, backend) for qc in qc_list]\njob_list = [backend.run(qobj) for qobj in qobj_list]\n\nwhile job_list:\n    for job in job_list:\n        if job.status() in JOB_FINAL_STATES:\n            job_list.remove(job)\n            print(job.result().get_counts())\n",
+    "fixed": "from qiskit import *\nfrom qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit\nfrom qiskit import Aer\n\nfrom qiskit.compiler import transpile, assemble\n\nn_qubits = 5\nqc_list = []\n\nfor i in range(n_qubits):\n    qr = QuantumRegister(n_qubits)\n    cr = ClassicalRegister(n_qubits)\n    qc = QuantumCircuit(qr, cr)\n    qc.x(qr[i])\n    qc.measure(qr, cr)\n    qc_list.append(qc)\n\nbackend = Aer.get_backend('qasm_simulator')\ntranspiled_circs = transpile(qc_list, backend=backend)\nqobjs = assemble(transpiled_circs, backend=backend)\njob_info = backend.run(qobjs)\nfor circ_index in range(len(transpiled_circs)):\n    print(job_info.result().get_counts(transpiled_circs[circ_index]))\n",
+    "ref_stdout": "{'00001': 1024}\n{'00010': 1024}\n{'00100': 1024}\n{'01000': 1024}\n{'10000': 1024}\n",
+    "buggy_rc": 1
+  },
+  {
+    "id": "b4q-38",
+    "src_id": 38,
+    "bug_type": "Throw Exceptions",
+    "kind": "crash",
+    "buggy": "from qiskit import *\nfrom qiskit.providers.aer.library import *\n\nq1 = QuantumCircuit(2)\nq1.save_statevector() # Save initial state\nq1.h(0)\nq1.save_statevector() # Save state after Hadamard\nq1.cx(0, 1)\nq1.save_statevector() # Save state after CNOT (also a final state)\njob = execute(q1, backend=Aer.get_backend('aer_simulator'), shots=1024)\nstatevectors = job.result().get_statevector()\n",
+    "fixed": "from qiskit import *\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nst0 = Statevector.from_instruction(qc) \nqc.h(0)\nst1 = Statevector.from_instruction(qc)\nqc.cnot(0, 1)\nst2 = Statevector.from_instruction(qc)\n\nprint(st0)\nprint(st1)\nprint(st2)\n\n\nStatevector([1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],\n        dims=(2, 2))\nStatevector([0.70710678+0.j, 0.70710678+0.j, 0.             +0.j,\n         0.        +0.j],\n        dims=(2, 2))\nStatevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,\n         0.70710678+0.j],\n        dims=(2, 2))",
+    "ref_stdout": "Statevector([1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],\n            dims=(2, 2))\nStatevector([0.70710678+0.j, 0.70710678+0.j, 0.        +0.j,\n             0.        +0.j],\n            dims=(2, 2))\nStatevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,\n             0.70710678+0.j],\n            dims=(2, 2))\n",
+    "buggy_rc": 1
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "counts_fixed_tvd": {
+    "n": 31,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 0.0
+  },
+  "counts_buggy_tvd": {
+    "n": 9,
+    "min": 0.2311,
+    "median": 0.5,
+    "max": 0.5005
+  },
+  "state_fixed_fid": {
+    "n": 1,
+    "min": 1.0,
+    "median": 1.0,
+    "max": 1.0
+  },
+  "state_buggy_fid": null,
+  "buggy_crash_nonrun": 23,
+  "tvd_sweep": {
+    "0.02": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    },
+    "0.04": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    },
+    "0.08": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    },
+    "0.12": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    },
+    "0.16": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    },
+    "0.2": {
+      "fixed_pass": 31,
+      "fixed_total": 31,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 9
+    }
+  },
+  "fid_sweep": {
+    "0.9": {
+      "fixed_pass": 1,
+      "fixed_total": 1,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 0
+    },
+    "0.95": {
+      "fixed_pass": 1,
+      "fixed_total": 1,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 0
+    },
+    "0.99": {
+      "fixed_pass": 1,
+      "fixed_total": 1,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 0
+    },
+    "0.999": {
+      "fixed_pass": 1,
+      "fixed_total": 1,
+      "buggy_false_accept": 0,
+      "buggy_run_total": 0
+    }
+  },
+  "shot_seed_jitter_max_tvd": {
+    "n": 31,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 0.0
+  }
+}

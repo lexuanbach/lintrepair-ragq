@@ -1,0 +1,258 @@
+[
+  {
+    "id": "A1-execute-bell",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "A2-execute-ghz",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "A3-execute-superposition",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "A4-execute-2bell",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "B1-aer-import",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "B2-aer-qualified",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "B3-aer-statevector",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "B4-aer-import-w",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "C1-cx-oob",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "C2-h-oob",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": false,
+    "B2_pass5": false
+  },
+  {
+    "id": "C3-x-oob",
+    "kind": "crash",
+    "B0_pass1": false,
+    "B0_pass5": false,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "C4-cz-oob",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "D1-creg-small",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "D2-clbit-index",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "D3-creg-obj-small",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "D4-no-creg",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "E1-no-measure",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "E2-no-measure-ghz",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "E3-partial-measure",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "E4-no-measure-super",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "F1-cz-for-cx",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": false,
+    "B2_pass5": false
+  },
+  {
+    "id": "F2-rx-degrees",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "F3-swapped-cx",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": false,
+    "B2_pass5": false
+  },
+  {
+    "id": "F4-missing-h",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": false,
+    "B2_pass5": false
+  },
+  {
+    "id": "G1-msb-read",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "G2-label-order",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "G3-qubit2-read",
+    "kind": "semantic",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "G4-marked-state",
+    "kind": "semantic",
+    "B0_pass1": false,
+    "B0_pass5": true,
+    "B2_pass1": false,
+    "B2_pass5": true
+  },
+  {
+    "id": "H1-bind-params",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "H2-bind-params-2",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "H3-bind-list",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  },
+  {
+    "id": "H4-bind-3q",
+    "kind": "crash",
+    "B0_pass1": true,
+    "B0_pass5": true,
+    "B2_pass1": true,
+    "B2_pass5": true
+  }
+]

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local virtual environments (do NOT commit; see requirements.txt)
+.venv/
+venv/
+env/
+
+# The raw LLM response cache (~10.9k entries) is distributed as a GitHub release
+# asset (.llm_cache.tar.gz), not committed to git, so the clone stays lean. The
+# offline reproduction (reproduce.sh) runs from the frozen result files and does not
+# require the cache; download and extract the asset only to RE-run model calls.
+.llm_cache/
+.llm_cache.tar.gz

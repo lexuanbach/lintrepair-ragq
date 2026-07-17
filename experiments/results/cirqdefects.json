@@ -1,0 +1,274 @@
+{
+  "gpt-4o-mini": {
+    "B0": 8,
+    "B2": 8,
+    "B0filler": 8,
+    "n": 10,
+    "per_prog": {
+      "E1-decode-msb": {
+        "family": "endianness-postproc",
+        "B0": false,
+        "B2": false,
+        "B0filler": false
+      },
+      "E2-counts-relabel": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E3-parity": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G1-cz-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G2-swapped-cnot": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G3-ch-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P1-degrees": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P2-half-angle": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B1-missing-s": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B2-x-basis": {
+        "family": "wrong-basis",
+        "B0": false,
+        "B2": false,
+        "B0filler": false
+      }
+    }
+  },
+  "gpt-4o": {
+    "B0": 10,
+    "B2": 9,
+    "B0filler": 9,
+    "n": 10,
+    "per_prog": {
+      "E1-decode-msb": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E2-counts-relabel": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": false,
+        "B0filler": false
+      },
+      "E3-parity": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G1-cz-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G2-swapped-cnot": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G3-ch-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P1-degrees": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P2-half-angle": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B1-missing-s": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B2-x-basis": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      }
+    }
+  },
+  "claude-haiku-4-5": {
+    "B0": 10,
+    "B2": 10,
+    "B0filler": 10,
+    "n": 10,
+    "per_prog": {
+      "E1-decode-msb": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E2-counts-relabel": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E3-parity": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G1-cz-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G2-swapped-cnot": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G3-ch-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P1-degrees": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P2-half-angle": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B1-missing-s": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B2-x-basis": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      }
+    }
+  },
+  "claude-sonnet-4-6": {
+    "B0": 10,
+    "B2": 10,
+    "B0filler": 10,
+    "n": 10,
+    "per_prog": {
+      "E1-decode-msb": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E2-counts-relabel": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "E3-parity": {
+        "family": "endianness-postproc",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G1-cz-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G2-swapped-cnot": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "G3-ch-for-cx": {
+        "family": "wrong-gate",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P1-degrees": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "P2-half-angle": {
+        "family": "wrong-param",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B1-missing-s": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      },
+      "B2-x-basis": {
+        "family": "wrong-basis",
+        "B0": true,
+        "B2": true,
+        "B0filler": true
+      }
+    }
+  }
+}

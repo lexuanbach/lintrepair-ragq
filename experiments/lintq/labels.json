@@ -1,0 +1,162 @@
+{
+  "A1-execute-bell": {
+    "kind": "crash",
+    "category": "deprecated-execute-api"
+  },
+  "A2-execute-ghz": {
+    "kind": "crash",
+    "category": "deprecated-execute-api"
+  },
+  "A3-execute-superposition": {
+    "kind": "crash",
+    "category": "deprecated-execute-api"
+  },
+  "A4-execute-2bell": {
+    "kind": "crash",
+    "category": "deprecated-execute-api"
+  },
+  "B1-aer-import": {
+    "kind": "crash",
+    "category": "removed-aer-import"
+  },
+  "B2-aer-qualified": {
+    "kind": "crash",
+    "category": "removed-aer-import"
+  },
+  "B3-aer-statevector": {
+    "kind": "crash",
+    "category": "removed-aer-import"
+  },
+  "B4-aer-import-w": {
+    "kind": "crash",
+    "category": "removed-aer-import"
+  },
+  "C1-cx-oob": {
+    "kind": "crash",
+    "category": "qubit-index-oob"
+  },
+  "C2-h-oob": {
+    "kind": "crash",
+    "category": "qubit-index-oob"
+  },
+  "C3-x-oob": {
+    "kind": "crash",
+    "category": "qubit-index-oob"
+  },
+  "C4-cz-oob": {
+    "kind": "crash",
+    "category": "qubit-index-oob"
+  },
+  "D1-creg-small": {
+    "kind": "crash",
+    "category": "clbit-size-mismatch"
+  },
+  "D2-clbit-index": {
+    "kind": "crash",
+    "category": "clbit-size-mismatch"
+  },
+  "D3-creg-obj-small": {
+    "kind": "crash",
+    "category": "clbit-size-mismatch"
+  },
+  "D4-no-creg": {
+    "kind": "crash",
+    "category": "clbit-size-mismatch"
+  },
+  "E1-no-measure": {
+    "kind": "crash",
+    "category": "missing-measurement"
+  },
+  "E2-no-measure-ghz": {
+    "kind": "crash",
+    "category": "missing-measurement"
+  },
+  "E3-partial-measure": {
+    "kind": "semantic",
+    "category": "missing-measurement"
+  },
+  "E4-no-measure-super": {
+    "kind": "crash",
+    "category": "missing-measurement"
+  },
+  "F1-cz-for-cx": {
+    "kind": "semantic",
+    "category": "wrong-gate-or-param"
+  },
+  "F2-rx-degrees": {
+    "kind": "semantic",
+    "category": "wrong-gate-or-param"
+  },
+  "F3-swapped-cx": {
+    "kind": "semantic",
+    "category": "wrong-gate-or-param"
+  },
+  "F4-missing-h": {
+    "kind": "semantic",
+    "category": "wrong-gate-or-param"
+  },
+  "G1-msb-read": {
+    "kind": "semantic",
+    "category": "endianness-bit-order"
+  },
+  "G2-label-order": {
+    "kind": "semantic",
+    "category": "endianness-bit-order"
+  },
+  "G3-qubit2-read": {
+    "kind": "semantic",
+    "category": "endianness-bit-order"
+  },
+  "G4-marked-state": {
+    "kind": "semantic",
+    "category": "endianness-bit-order"
+  },
+  "H1-bind-params": {
+    "kind": "crash",
+    "category": "deprecated-bind-parameters"
+  },
+  "H2-bind-params-2": {
+    "kind": "crash",
+    "category": "deprecated-bind-parameters"
+  },
+  "H3-bind-list": {
+    "kind": "crash",
+    "category": "deprecated-bind-parameters"
+  },
+  "H4-bind-3q": {
+    "kind": "crash",
+    "category": "deprecated-bind-parameters"
+  },
+  "K1-bell": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K2-ghz": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K3-statevector": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K4-measure-all": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K5-param": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K6-endian-correct": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K7-rotation": {
+    "kind": "clean",
+    "category": "clean"
+  },
+  "K8-3q-chain": {
+    "kind": "clean",
+    "category": "clean"
+  }
+}

@@ -1,0 +1,983 @@
+{
+  "$schema" : "https://json.schemastore.org/sarif-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "CodeQL",
+        "organization" : "GitHub",
+        "semanticVersion" : "2.11.2",
+        "rules" : [ {
+          "id" : "ql-deprecated-identity",
+          "name" : "ql-deprecated-identity",
+          "shortDescription" : {
+            "text" : "Deprecated Identity"
+          },
+          "fullDescription" : {
+            "text" : "Check if the deprecated iden() API is called instead of the identity()"
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "Check if the deprecated iden() API is called instead of the identity()",
+            "id" : "ql-deprecated-identity",
+            "kind" : "problem",
+            "name" : "Deprecated Identity",
+            "precision" : "medium",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-ghost-composition",
+          "name" : "ql-ghost-composition",
+          "shortDescription" : {
+            "text" : "Ghost Composition."
+          },
+          "fullDescription" : {
+            "text" : "when two circuits are composed but the inplace=True is not used and the return value of the compose() method is not store, then the composed circuit is lost."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "when two circuits are composed but the inplace=True is not used\n and the return value of the compose() method is not store, then the\n composed circuit is lost.",
+            "id" : "ql-ghost-composition",
+            "kind" : "problem",
+            "name" : "Ghost Composition.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-conditional-without-measurement",
+          "name" : "ql-conditional-without-measurement",
+          "shortDescription" : {
+            "text" : "Conditional gate without preceeding measurement."
+          },
+          "fullDescription" : {
+            "text" : "when a conditional gate is applied on a qubit, there must be a preceeding measurement on that qubit."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "when a conditional gate is applied on a qubit, there must be a preceeding measurement on that qubit.",
+            "id" : "ql-conditional-without-measurement",
+            "kind" : "problem",
+            "name" : "Conditional gate without preceeding measurement.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-double-measurement",
+          "name" : "ql-double-measurement",
+          "shortDescription" : {
+            "text" : "Double measurement on the same qubit."
+          },
+          "fullDescription" : {
+            "text" : "two consecutive measurements on the same qubit of a given circuit."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "two consecutive measurements on the same qubit of a given circuit.",
+            "id" : "ql-double-measurement",
+            "kind" : "problem",
+            "name" : "Double measurement on the same qubit.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-measure-all-abuse",
+          "name" : "ql-measure-all-abuse",
+          "shortDescription" : {
+            "text" : "Measure all abuse."
+          },
+          "fullDescription" : {
+            "text" : "Finds usage of measure_all calls when an initialized classical register should be used instead."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "Finds usage of measure_all calls when an initialized classical\n register should be used instead.",
+            "id" : "ql-measure-all-abuse",
+            "kind" : "problem",
+            "name" : "Measure all abuse.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-operation-after-measurement",
+          "name" : "ql-operation-after-measurement",
+          "shortDescription" : {
+            "text" : "Operation after measurement."
+          },
+          "fullDescription" : {
+            "text" : "Finds usage of measure of a qubit followed by a gate on the same qubit."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "Finds usage of measure of a qubit followed by a gate on the\n same qubit.",
+            "id" : "ql-operation-after-measurement",
+            "kind" : "problem",
+            "name" : "Operation after measurement.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-op-after-optimization",
+          "name" : "ql-op-after-optimization",
+          "shortDescription" : {
+            "text" : "Operations after optimization."
+          },
+          "fullDescription" : {
+            "text" : "Finds any operation (gate or measurement) is applied to a transpiled circuit has some."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "correctness", "reliability", "qiskit", "LintQ" ],
+            "description" : "Finds any operation (gate or measurement) is applied to a transpiled\n circuit has some.",
+            "id" : "ql-op-after-optimization",
+            "kind" : "problem",
+            "name" : "Operations after optimization.",
+            "precision" : "high",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-constant-classic-bit",
+          "name" : "ql-constant-classic-bit",
+          "shortDescription" : {
+            "text" : "Constant Classic Bit"
+          },
+          "fullDescription" : {
+            "text" : "Finds circuits where qubits are never used but measured, leading to a constant classic bit."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "efficiency", "qiskit", "LintQ" ],
+            "description" : "Finds circuits where qubits are never used but measured, leading to a constant classic bit.",
+            "id" : "ql-constant-classic-bit",
+            "kind" : "problem",
+            "name" : "Constant Classic Bit",
+            "precision" : "medium",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-oversized-circuit",
+          "name" : "ql-oversized-circuit",
+          "shortDescription" : {
+            "text" : "Oversized circuit."
+          },
+          "fullDescription" : {
+            "text" : "Finds circuits instantiated with a larger number of qubits than the actual number of qubits used."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "efficiency", "qiskit", "LintQ" ],
+            "description" : "Finds circuits instantiated with a larger number of qubits than\n the actual number of qubits used.",
+            "id" : "ql-oversized-circuit",
+            "kind" : "problem",
+            "name" : "Oversized circuit.",
+            "precision" : "medium",
+            "problem.severity" : "warning"
+          }
+        }, {
+          "id" : "ql-unmeasurable-qubits",
+          "name" : "ql-unmeasurable-qubits",
+          "shortDescription" : {
+            "text" : "Unmeasurable qubits."
+          },
+          "fullDescription" : {
+            "text" : "Finds circuits instantiated with a lower number of classical bits than the number of qubits, meaning that the full quantum state cannot be measured."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "efficiency", "qiskit", "LintQ" ],
+            "description" : "Finds circuits instantiated with a lower number of classical\n bits than the number of qubits, meaning that the full quantum state cannot\n be measured.",
+            "id" : "ql-unmeasurable-qubits",
+            "kind" : "problem",
+            "name" : "Unmeasurable qubits.",
+            "precision" : "medium",
+            "problem.severity" : "warning"
+          }
+        } ]
+      },
+      "extensions" : [ {
+        "name" : "codeql/csharp-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/csharp/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/csharp/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/cpp/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/cpp/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/java/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/java/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-upgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/legacy-upgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/legacy-upgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/ruby/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/ruby/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/javascript/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/javascript/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "mattepalte/qlint",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/python/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/python/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "mattepalte/qlint-tests",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "mattepalte/qiskit",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/LintQ/codeql/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-downgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///usr/local/codeql-home/codeql/go/downgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///usr/local/codeql-home/codeql/go/downgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      } ]
+    },
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "C1-cx-oob.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 0
+      }
+    }, {
+      "location" : {
+        "uri" : "C2-h-oob.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 1
+      }
+    }, {
+      "location" : {
+        "uri" : "C4-cz-oob.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 2
+      }
+    }, {
+      "location" : {
+        "uri" : "G1-msb-read.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 3
+      }
+    }, {
+      "location" : {
+        "uri" : "G2-label-order.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 4
+      }
+    }, {
+      "location" : {
+        "uri" : "G3-qubit2-read.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 5
+      }
+    }, {
+      "location" : {
+        "uri" : "G4-marked-state.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 6
+      }
+    }, {
+      "location" : {
+        "uri" : "K6-endian-correct.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 7
+      }
+    }, {
+      "location" : {
+        "uri" : "B3-aer-statevector.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 8
+      }
+    }, {
+      "location" : {
+        "uri" : "D1-creg-small.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 9
+      }
+    }, {
+      "location" : {
+        "uri" : "D3-creg-obj-small.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 10
+      }
+    }, {
+      "location" : {
+        "uri" : "D4-no-creg.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 11
+      }
+    }, {
+      "location" : {
+        "uri" : "K3-statevector.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 12
+      }
+    }, {
+      "location" : {
+        "uri" : "K4-measure-all.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 13
+      }
+    } ],
+    "results" : [ {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C1-cx-oob.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e72bbe4b407cc75c:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '2' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C2-h-oob.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "4b31be7d77595907:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '2' but never uses it.\nCircuit 'qc' measures qubit '0' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C4-cz-oob.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 2
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "fe5b17f724fd451c:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it.\nCircuit 'qc' measures qubit '2' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "G1-msb-read.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 3
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "7ae98f59cc180522:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "G2-label-order.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 4
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "cc8ef86373d266b6:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it.\nCircuit 'qc' measures qubit '0' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "G3-qubit2-read.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 5
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5f1df209fe21535e:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it.\nCircuit 'qc' measures qubit '2' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "G4-marked-state.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 4,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "93102abfa844e891:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-constant-classic-bit",
+      "ruleIndex" : 7,
+      "rule" : {
+        "id" : "ql-constant-classic-bit",
+        "index" : 7
+      },
+      "message" : {
+        "text" : "Circuit 'qc' measures qubit '1' but never uses it.\nCircuit 'qc' measures qubit '2' but never uses it."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "K6-endian-correct.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "93102abfa844e891:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'qc' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "B3-aer-statevector.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 8
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "78a3ffb71ba17592:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'RESULT' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "B3-aer-statevector.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 8
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 18,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6b66a705ddee66a:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'qc' has more qubits (3) than classical  bits (2)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D1-creg-small.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 9
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "fccf9bd466806129:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'RESULT' has more qubits (3) than classical  bits (2)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D1-creg-small.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 9
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 18,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ec26410c70741ad0:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'qc' has more qubits (2) than classical  bits (1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D3-creg-obj-small.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 5,
+            "startColumn" : 6,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "f5ef2ff01cdc2377:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'RESULT' has more qubits (2) than classical  bits (1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D3-creg-obj-small.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 9,
+            "startColumn" : 18,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ec26410c70741ad0:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'qc' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D4-no-creg.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "1a98766b99f95705:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'RESULT' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "D4-no-creg.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 18,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ec26410c70741ad0:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'qc' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "K3-statevector.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 3,
+            "startColumn" : 6,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "cb3eb15240819f85:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "ql-unmeasurable-qubits",
+      "ruleIndex" : 9,
+      "rule" : {
+        "id" : "ql-unmeasurable-qubits",
+        "index" : 9
+      },
+      "message" : {
+        "text" : "Circuit 'RESULT' has more qubits (2) than classical  bits (0)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "K4-measure-all.py",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 13
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 18,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ec26410c70741ad0:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      }
+    } ],
+    "columnKind" : "unicodeCodePoints",
+    "properties" : {
+      "semmle.formatSpecifier" : "sarifv2.1.0"
+    }
+  } ]
+}

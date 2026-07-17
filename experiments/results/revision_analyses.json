@@ -1,0 +1,148 @@
+{
+  "family_level_pooled": {
+    "clbit-size-mismatch": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.431,
+      "B2": 0.625,
+      "B3": 0.694,
+      "B4": 0.611
+    },
+    "deprecated-bind-parameters": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.056,
+      "B2": 0.653,
+      "B3": 0.597,
+      "B4": 0.597
+    },
+    "deprecated-execute-api": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.319,
+      "B2": 0.722,
+      "B3": 0.694,
+      "B4": 0.625
+    },
+    "endianness-bit-order": {
+      "kind": "semantic",
+      "n_inst": 4,
+      "B0": 0.375,
+      "B2": 0.403,
+      "B3": 0.472,
+      "B4": 0.389
+    },
+    "missing-measurement": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.375,
+      "B2": 0.222,
+      "B3": 0.264,
+      "B4": 0.264
+    },
+    "qubit-index-oob": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.597,
+      "B2": 0.472,
+      "B3": 0.444,
+      "B4": 0.417
+    },
+    "removed-aer-import": {
+      "kind": "crash",
+      "n_inst": 4,
+      "B0": 0.319,
+      "B2": 0.806,
+      "B3": 0.75,
+      "B4": 0.736
+    },
+    "wrong-gate-or-param": {
+      "kind": "semantic",
+      "n_inst": 4,
+      "B0": 0.278,
+      "B2": 0.125,
+      "B3": 0.208,
+      "B4": 0.153
+    }
+  },
+  "strong_model_family": {
+    "wrong-gate-or-param": {
+      "Sonnet": {
+        "B0": "4/4",
+        "B2": "1/4",
+        "B3": "2/4",
+        "B4": "3/4"
+      },
+      "Haiku": {
+        "B0": "2/4",
+        "B2": "2/4",
+        "B3": "2/4",
+        "B4": "2/4"
+      }
+    },
+    "endianness-bit-order": {
+      "Sonnet": {
+        "B0": "4/4",
+        "B2": "4/4",
+        "B3": "4/4",
+        "B4": "4/4"
+      },
+      "Haiku": {
+        "B0": "4/4",
+        "B2": "2/4",
+        "B3": "4/4",
+        "B4": "3/4"
+      }
+    },
+    "missing-measurement": {
+      "Sonnet": {
+        "B0": "4/4",
+        "B2": "4/4",
+        "B3": "4/4",
+        "B4": "4/4"
+      },
+      "Haiku": {
+        "B0": "4/4",
+        "B2": "0/4",
+        "B3": "1/4",
+        "B4": "1/4"
+      }
+    }
+  },
+  "stratified_by_kind": {
+    "crash": {
+      "n": 414,
+      "diff": 0.258,
+      "ci": [
+        0.196,
+        0.321
+      ],
+      "mcnemar_p": 0.0,
+      "wins": 153,
+      "losses": 46
+    },
+    "semantic": {
+      "n": 162,
+      "diff": -0.093,
+      "ci": [
+        -0.173,
+        -0.012
+      ],
+      "mcnemar_p": 0.0357,
+      "wins": 15,
+      "losses": 30
+    }
+  },
+  "capability_corr": {
+    "pearson": -0.629,
+    "spearman": -0.543,
+    "n_models": 18
+  },
+  "expanded_negatives": {
+    "n_negatives": 40,
+    "matched_fixes": 32,
+    "clean_idioms": 8,
+    "union_false_positives": 0,
+    "precision": 1.0
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "total": "10/32",
+  "by_family": {
+    "deprecated-execute-api": "2/4",
+    "removed-aer-import": "4/4",
+    "qubit-index-oob": "0/4",
+    "clbit-size-mismatch": "0/4",
+    "missing-measurement": "0/4",
+    "wrong-gate-or-param": "0/4",
+    "endianness-bit-order": "0/4",
+    "deprecated-bind-parameters": "4/4"
+  },
+  "records": [
+    {
+      "id": "A1-execute-bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "A2-execute-ghz",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "A3-execute-superposition",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "A4-execute-2bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "B1-aer-import",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "B2-aer-qualified",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "B3-aer-statevector",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "B4-aer-import-w",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "C1-cx-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "C2-h-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "C3-x-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "C4-cz-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "D1-creg-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "D2-clbit-index",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "D3-creg-obj-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "D4-no-creg",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "E1-no-measure",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "E2-no-measure-ghz",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "E3-partial-measure",
+      "category": "missing-measurement",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "E4-no-measure-super",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "fixed": false
+    },
+    {
+      "id": "F1-cz-for-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "F2-rx-degrees",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "F3-swapped-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "F4-missing-h",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "G1-msb-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "G2-label-order",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "G3-qubit2-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "G4-marked-state",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "fixed": false
+    },
+    {
+      "id": "H1-bind-params",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "H2-bind-params-2",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "H3-bind-list",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "fixed": true
+    },
+    {
+      "id": "H4-bind-3q",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "fixed": true
+    }
+  ]
+}

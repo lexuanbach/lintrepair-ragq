@@ -1,0 +1,454 @@
+{
+  "claude-sonnet-4-6": [
+    {
+      "id": "A1-execute-bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A2-execute-ghz",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A3-execute-superposition",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A4-execute-2bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B1-aer-import",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B2-aer-qualified",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B3-aer-statevector",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B4-aer-import-w",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "C1-cx-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "C2-h-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "C3-x-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": false,
+      "B2irrel": true
+    },
+    {
+      "id": "C4-cz-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D1-creg-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D2-clbit-index",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D3-creg-obj-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D4-no-creg",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E1-no-measure",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E2-no-measure-ghz",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E3-partial-measure",
+      "category": "missing-measurement",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E4-no-measure-super",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "F1-cz-for-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "F2-rx-degrees",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "F3-swapped-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": false
+    },
+    {
+      "id": "F4-missing-h",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "G1-msb-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "G2-label-order",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "G3-qubit2-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "G4-marked-state",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "H1-bind-params",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H2-bind-params-2",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H3-bind-list",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H4-bind-3q",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    }
+  ],
+  "claude-haiku-4-5-20251001": [
+    {
+      "id": "A1-execute-bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A2-execute-ghz",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A3-execute-superposition",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "A4-execute-2bell",
+      "category": "deprecated-execute-api",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B1-aer-import",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B2-aer-qualified",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B3-aer-statevector",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "B4-aer-import-w",
+      "category": "removed-aer-import",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "C1-cx-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "C2-h-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "C3-x-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "C4-cz-oob",
+      "category": "qubit-index-oob",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D1-creg-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D2-clbit-index",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D3-creg-obj-small",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "D4-no-creg",
+      "category": "clbit-size-mismatch",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E1-no-measure",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": false
+    },
+    {
+      "id": "E2-no-measure-ghz",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": false
+    },
+    {
+      "id": "E3-partial-measure",
+      "category": "missing-measurement",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "E4-no-measure-super",
+      "category": "missing-measurement",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": false
+    },
+    {
+      "id": "F1-cz-for-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "F2-rx-degrees",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": true
+    },
+    {
+      "id": "F3-swapped-cx",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": true
+    },
+    {
+      "id": "F4-missing-h",
+      "category": "wrong-gate-or-param",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "G1-msb-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": true
+    },
+    {
+      "id": "G2-label-order",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "G3-qubit2-read",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": false,
+      "B2irrel": false
+    },
+    {
+      "id": "G4-marked-state",
+      "category": "endianness-bit-order",
+      "kind": "semantic",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H1-bind-params",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H2-bind-params-2",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H3-bind-list",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    },
+    {
+      "id": "H4-bind-3q",
+      "category": "deprecated-bind-parameters",
+      "kind": "crash",
+      "B0filler": true,
+      "B2irrel": true
+    }
+  ]
+}

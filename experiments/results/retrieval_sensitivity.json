@@ -1,0 +1,58 @@
+[
+  {
+    "label": "tfidf-k2",
+    "model": "claude-sonnet-4-6",
+    "k": 2,
+    "pass1": 29,
+    "n": 32
+  },
+  {
+    "label": "tfidf-k4",
+    "model": "claude-sonnet-4-6",
+    "k": 4,
+    "pass1": 27,
+    "n": 32
+  },
+  {
+    "label": "tfidf-k6",
+    "model": "claude-sonnet-4-6",
+    "k": 6,
+    "pass1": 28,
+    "n": 32
+  },
+  {
+    "label": "bm25-k4",
+    "model": "claude-sonnet-4-6",
+    "k": 4,
+    "pass1": 27,
+    "n": 32
+  },
+  {
+    "label": "tfidf-k2",
+    "model": "gpt-4o-mini",
+    "k": 2,
+    "pass1": 18,
+    "n": 32
+  },
+  {
+    "label": "tfidf-k4",
+    "model": "gpt-4o-mini",
+    "k": 4,
+    "pass1": 20,
+    "n": 32
+  },
+  {
+    "label": "tfidf-k6",
+    "model": "gpt-4o-mini",
+    "k": 6,
+    "pass1": 23,
+    "n": 32
+  },
+  {
+    "label": "bm25-k4",
+    "model": "gpt-4o-mini",
+    "k": 4,
+    "pass1": 22,
+    "n": 32
+  }
+]

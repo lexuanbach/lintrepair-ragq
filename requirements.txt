@@ -1,0 +1,17 @@
+# Python 3.10. Core: benchmark execution + oracle + all cached-from-disk
+# reproduction. Qiskit/Aer are pinned to the exact versions used in the paper;
+# requests is bounded to its stable major. For a byte-exact replay, generate a full
+# lock (`pip freeze > lock.txt`) in the packaging environment and ship it alongside.
+qiskit==2.4.2
+qiskit-aer==0.17.2
+requests>=2,<3
+
+# Cross-SDK probe (§ Threats: the 10-program Cirq benchmark) only.
+cirq>=1,<2
+
+# COLD runs against live APIs only (cached reproduction does NOT need these):
+#   anthropic        # claude-*   (credits exhausted; cache-only in this artifact)
+#   openai           # gpt-*  and the local Ollama OpenAI-compatible endpoint
+#   google-genai     # gemini-*
+# Stats (Wilson/bootstrap/McNemar) and the interaction regression are pure Python;
+# no numpy/scipy required.

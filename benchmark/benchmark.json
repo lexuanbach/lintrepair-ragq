@@ -1,0 +1,671 @@
+[
+  {
+    "id": "A1-execute-bell",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "bug_line_substr": "from qiskit import execute",
+    "note": "Qiskit>=1.0 removed qiskit.execute; real migration defect.",
+    "buggy": "from qiskit import QuantumCircuit, execute, Aer\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nbackend = Aer.get_backend('qasm_simulator')\njob = execute(qc, backend, shots=8192, seed_simulator=1234)\nRESULT = job.result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "A2-execute-ghz",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "bug_line_substr": "execute(",
+    "note": "Qiskit 1.0 execute() removal on a 3-qubit GHZ preparation.",
+    "buggy": "import qiskit\nfrom qiskit import QuantumCircuit\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nbackend = qiskit.Aer.get_backend('qasm_simulator')\nRESULT = qiskit.execute(qc, backend, shots=8192, seed_simulator=7).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "111": 4053,
+        "000": 4139
+      }
+    }
+  },
+  {
+    "id": "A3-execute-superposition",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "bug_line_substr": "execute(",
+    "note": "execute() removal on a single-qubit superposition.",
+    "buggy": "from qiskit import QuantumCircuit, execute\nfrom qiskit import Aer\nqc = QuantumCircuit(1, 1)\nqc.h(0)\nqc.measure(0, 0)\nRESULT = execute(qc, Aer.get_backend('qasm_simulator'), shots=8192, seed_simulator=3).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.h(0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=3)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 4038,
+        "0": 4154
+      }
+    }
+  },
+  {
+    "id": "A4-execute-2bell",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "bug_line_substr": "execute(",
+    "note": "execute() removal on two independent Bell pairs.",
+    "buggy": "from qiskit import QuantumCircuit, execute, Aer\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nRESULT = execute(qc, Aer.get_backend('aer_simulator'), shots=8192, seed_simulator=11).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1100": 2015,
+        "0011": 2078,
+        "0000": 2031,
+        "1111": 2068
+      }
+    }
+  },
+  {
+    "id": "B1-aer-import",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "bug_line_substr": "from qiskit import Aer",
+    "note": "qiskit.Aer removed in 1.0; must import from qiskit_aer.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit import Aer\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = Aer.get_backend('aer_simulator')\nRESULT = sim.run(transpile(qc, sim), shots=8192, seed_simulator=1234).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "B2-aer-qualified",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "bug_line_substr": "qiskit.Aer",
+    "note": "Qualified qiskit.Aer access removed in 1.0.",
+    "buggy": "import qiskit\nfrom qiskit import QuantumCircuit, transpile\nqc = QuantumCircuit(3, 3)\nqc.h(range(3))\nqc.measure(range(3), range(3))\nsim = qiskit.Aer.get_backend('aer_simulator')\nRESULT = sim.run(transpile(qc, sim), shots=8192, seed_simulator=5).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(range(3))\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=5)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "101": 1068,
+        "011": 1029,
+        "111": 1017,
+        "100": 1037,
+        "110": 1000,
+        "001": 1030,
+        "000": 1029,
+        "010": 982
+      }
+    }
+  },
+  {
+    "id": "B3-aer-statevector",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "bug_line_substr": "from qiskit import Aer",
+    "note": "qiskit.Aer used for a statevector backend; removed in 1.0.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit import Aer\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nqc.save_statevector()\nsim = Aer.get_backend('aer_simulator_statevector')\nRESULT = sim.run(transpile(qc, sim)).result().get_statevector()\n",
+    "fixed": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nRESULT = Statevector(qc)\n",
+    "reference_result": {
+      "type": "state",
+      "data": [
+        [
+          0.7071067811865475,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.7071067811865475,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "B4-aer-import-w",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "bug_line_substr": "from qiskit import Aer",
+    "note": "qiskit.Aer on a W-state-like circuit.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit import Aer\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(0, 1)\nqc.cx(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = Aer.get_backend('aer_simulator')\nRESULT = sim.run(transpile(qc, sim), shots=8192, seed_simulator=2).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(0, 1)\nqc.cx(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 2772,
+        "11": 2684,
+        "01": 2736
+      }
+    }
+  },
+  {
+    "id": "C1-cx-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "bug_line_substr": "qc.cx(0, 2)",
+    "note": "CX targets qubit 2 in a 2-qubit register (CircuitError).",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 2)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "C2-h-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "bug_line_substr": "qc.h(3)",
+    "note": "Hadamard on qubit 3 of a 3-qubit (indices 0-2) circuit.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(3)\nqc.cx(0, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "011": 4076,
+        "000": 4116
+      }
+    }
+  },
+  {
+    "id": "C3-x-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "bug_line_substr": "qc.x(4)",
+    "note": "X on qubit 4 of a 4-qubit (indices 0-3) circuit.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(4)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "0111": 4119,
+        "1000": 4073
+      }
+    }
+  },
+  {
+    "id": "C4-cz-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "bug_line_substr": "qc.cz(1, 5)",
+    "note": "CZ targets qubit 5 in a 3-qubit register.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(1)\nqc.cz(1, 5)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=6)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(1)\nqc.cz(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=6)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "010": 4166,
+        "000": 4026
+      }
+    }
+  },
+  {
+    "id": "D1-creg-small",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "bug_line_substr": "QuantumCircuit(3, 2)",
+    "note": "3 qubits measured into a 2-bit classical register.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 2)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "111": 4092,
+        "000": 4100
+      }
+    }
+  },
+  {
+    "id": "D2-clbit-index",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "bug_line_substr": "qc.measure(1, 2)",
+    "note": "Measure into classical bit index 2 of a 2-bit register.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure(0, 0)\nqc.measure(1, 2)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure(0, 0)\nqc.measure(1, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "D3-creg-obj-small",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "bug_line_substr": "ClassicalRegister(1",
+    "note": "Explicit ClassicalRegister too small for the measurement.",
+    "buggy": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(1, 'c')\nqc = QuantumCircuit(q, c)\nqc.h(q[0]); qc.cx(q[0], q[1])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(2, 'c')\nqc = QuantumCircuit(q, c)\nqc.h(q[0]); qc.cx(q[0], q[1])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "D4-no-creg",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "bug_line_substr": "QuantumCircuit(2)",
+    "note": "No classical bits declared but measure() addresses clbit 0/1.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "E1-no-measure",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "bug_line_substr": "get_counts",
+    "note": "get_counts() on a circuit with no measurement (QiskitError).",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "E2-no-measure-ghz",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "bug_line_substr": "get_counts",
+    "note": "GHZ run for counts but never measured.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "000": 4139,
+        "111": 4053
+      }
+    }
+  },
+  {
+    "id": "E3-partial-measure",
+    "category": "missing-measurement",
+    "kind": "semantic",
+    "bug_line_substr": "qc.measure(0, 0)",
+    "note": "Only one of two entangled qubits is measured; correlation lost.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "E4-no-measure-super",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "bug_line_substr": "get_counts",
+    "note": "Superposition sampled for counts without measurement.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.h(0)\nsim = AerSimulator(seed_simulator=3)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.h(0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=3)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 4038,
+        "0": 4154
+      }
+    }
+  },
+  {
+    "id": "F1-cz-for-cx",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "bug_line_substr": "qc.cz(0, 1)",
+    "note": "CZ used where CX intended; Bell correlation lost (Bugs4Q-style).",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "F2-rx-degrees",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "bug_line_substr": "qc.rx(90",
+    "note": "Rotation angle given in degrees, not radians (classic unit bug).",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.rx(90, 0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.rx(math.pi / 2, 0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 4093,
+        "0": 4099
+      }
+    }
+  },
+  {
+    "id": "F3-swapped-cx",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "bug_line_substr": "qc.cx(1, 0)",
+    "note": "Control/target swapped; control is |0> so CX is a no-op.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "F4-missing-h",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "bug_line_substr": "qc.cx(0, 1)",
+    "note": "Forgotten Hadamard: no superposition, output collapses to 00.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "G1-msb-read",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "bug_line_substr": "key[0]",
+    "note": "Qiskit counts keys are little-endian; key[0] is the highest qubit.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)            # set qubit 0 to |1>\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n# probability that qubit 0 is 1\ntop = max(counts, key=counts.get)\nRESULT = {'q0_is_one': int(top[0] == '1')}\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\ntop = max(counts, key=counts.get)\nRESULT = {'q0_is_one': int(top[-1] == '1')}\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "q0_is_one": 1
+      }
+    }
+  },
+  {
+    "id": "G2-label-order",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "bug_line_substr": "str(1) + str(0)",
+    "note": "Expected outcome label built qubit-0-first; Qiskit prints qubit-0 last.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)                 # q0=1, q1=0\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\nexpected = str(1) + str(0)            # q0 then q1 -> '10' (wrong order)\nRESULT = {'hits': counts.get(expected, 0)}\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\nexpected = str(0) + str(1)            # q1 then q0 -> '01' (Qiskit order)\nRESULT = {'hits': counts.get(expected, 0)}\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "hits": 8192
+      }
+    }
+  },
+  {
+    "id": "G3-qubit2-read",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "bug_line_substr": "top[2]",
+    "note": "Reading qubit 2 by string index 2 (it is the lowest-index char).",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(2)            # set qubit 2 to |1>\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\ntop = max(counts, key=counts.get)\nRESULT = {'q2_is_one': int(top[2] == '1')}\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\ntop = max(counts, key=counts.get)\nRESULT = {'q2_is_one': int(top[0] == '1')}\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "q2_is_one": 1
+      }
+    }
+  },
+  {
+    "id": "G4-marked-state",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "bug_line_substr": "format(marked",
+    "note": "Grover-style marked-state label built in the wrong bit order.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nmarked = 1  # mark basis state |001> (qubit 0 set)\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\nlabel = format(marked, '03b')           # '001' (big-endian)\nRESULT = {'hits': counts.get(label, 0)}  # key is '001' here, but...\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nmarked = 1\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\nlabel = format(marked, '03b')[::-1]\nRESULT = {'hits': counts.get(label, 0)}\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "hits": 0
+      }
+    }
+  },
+  {
+    "id": "H1-bind-params",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "bug_line_substr": "bind_parameters",
+    "note": "QuantumCircuit.bind_parameters removed in 1.0 -> assign_parameters.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\ntheta = Parameter('theta')\nqc = QuantumCircuit(1, 1)\nqc.rx(theta, 0)\nqc.measure(0, 0)\nbound = qc.bind_parameters({theta: math.pi})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\ntheta = Parameter('theta')\nqc = QuantumCircuit(1, 1)\nqc.rx(theta, 0)\nqc.measure(0, 0)\nbound = qc.assign_parameters({theta: math.pi})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 8192
+      }
+    }
+  },
+  {
+    "id": "H2-bind-params-2",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "bug_line_substr": "bind_parameters",
+    "note": "bind_parameters on a two-parameter ansatz.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(a, 0); qc.ry(b, 1); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nbound = qc.bind_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(a, 0); qc.ry(b, 1); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nbound = qc.assign_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "11": 8192
+      }
+    }
+  },
+  {
+    "id": "H3-bind-list",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "bug_line_substr": "bind_parameters",
+    "note": "bind_parameters with a positional list of values.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\nt = Parameter('t')\nqc = QuantumCircuit(1, 1)\nqc.h(0); qc.rz(t, 0); qc.h(0)\nqc.measure(0, 0)\nbound = qc.bind_parameters([math.pi])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\nt = Parameter('t')\nqc = QuantumCircuit(1, 1)\nqc.h(0); qc.rz(t, 0); qc.h(0)\nqc.measure(0, 0)\nbound = qc.assign_parameters([math.pi])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 8192
+      }
+    }
+  },
+  {
+    "id": "H4-bind-3q",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "bug_line_substr": "bind_parameters",
+    "note": "bind_parameters on a 3-qubit parameterised circuit.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.crx(p, 0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nbound = qc.bind_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.crx(p, 0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nbound = qc.assign_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "111": 2043,
+        "001": 2050,
+        "000": 4099
+      }
+    }
+  },
+  {
+    "id": "K1-bell",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "K2-ghz",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "000": 4139,
+        "111": 4053
+      }
+    }
+  },
+  {
+    "id": "K3-statevector",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nRESULT = Statevector(qc)\n",
+    "fixed": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nRESULT = Statevector(qc)\n",
+    "reference_result": {
+      "type": "state",
+      "data": [
+        [
+          0.7071067811865475,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.7071067811865475,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "K4-measure-all",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nqc.measure_all()\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(0, 1)\nqc.measure_all()\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "00": 4092,
+        "11": 4100
+      }
+    }
+  },
+  {
+    "id": "K5-param",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\ntheta = Parameter('theta')\nqc = QuantumCircuit(1, 1)\nqc.rx(theta, 0)\nqc.measure(0, 0)\nbound = qc.assign_parameters({theta: math.pi})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\ntheta = Parameter('theta')\nqc = QuantumCircuit(1, 1)\nqc.rx(theta, 0)\nqc.measure(0, 0)\nbound = qc.assign_parameters({theta: math.pi})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 8192
+      }
+    }
+  },
+  {
+    "id": "K6-endian-correct",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\ntop = max(counts, key=counts.get)\nRESULT = {'decoded': int(top[::-1], 2)}\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=1234)\ncounts = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\ntop = max(counts, key=counts.get)\nRESULT = {'decoded': int(top[::-1], 2)}\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "decoded": 4
+      }
+    }
+  },
+  {
+    "id": "K7-rotation",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.rx(math.pi / 2, 0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.rx(math.pi / 2, 0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "1": 4093,
+        "0": 4099
+      }
+    }
+  },
+  {
+    "id": "K8-3q-chain",
+    "category": "clean",
+    "kind": "clean",
+    "bug_line_substr": "",
+    "note": "Correct program; ground-truth negative.",
+    "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.x(2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "fixed": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.x(2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+    "reference_result": {
+      "type": "counts",
+      "data": {
+        "100": 4108,
+        "011": 4084
+      }
+    }
+  }
+]

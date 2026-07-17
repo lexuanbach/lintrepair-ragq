@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# One-command, cache-only reproduction of every reported number.
+# Makes NO API call and needs NO network: it re-derives the canonical
+# results/paper_numbers.json from the frozen per-experiment result files and the
+# on-disk .llm_cache. Fails closed if a required result file is missing.
+set -euo pipefail
+cd "$(dirname "$0")"
+
+# The frozen result files below are sufficient for offline reproduction. The raw
+# LLM response cache ships compressed (.llm_cache.tar.gz, ~10.9k entries); unpack it
+# if present so that experiment RE-runs get cache hits instead of live API calls.
+if [ ! -d .llm_cache ] && [ -f .llm_cache.tar.gz ]; then
+  echo "[0/5] extracting .llm_cache.tar.gz ..."; tar xzf .llm_cache.tar.gz
+fi
+
+req() { [ -f "experiments/results/$1" ] || { echo "MISSING: results/$1 (cannot reproduce offline)"; exit 1; }; }
+for f in records_FROZEN.json models_extra.json summary_FROZEN.json revision_analyses.json \
+         lintq_comparison.json bugs4q_summary.json cirqdefects.json; do req "$f"; done
+
+echo "[1/4] aggregate the 18-model cross-model table ...";      python3 experiments/aggregate_models.py        >/dev/null
+echo "[2/4] revision analyses (stratified/family/capability) ..."; python3 experiments/run_revision_analyses.py >/dev/null
+echo "[3/4] interaction regression + loss/detector-audit ...";  python3 experiments/run_revision_interaction.py >/dev/null
+echo "[4/5] assemble canonical results/paper_numbers.json ...";  python3 experiments/make_paper_numbers.py
+echo "[5/5] verify paper <-> artifact consistency ...";          python3 check_consistency.py
+
+echo
+echo "OK. Canonical numbers: experiments/results/paper_numbers.json"
+echo "Provenance manifest: run 'python3 make_manifest.py' (verify: --check)."

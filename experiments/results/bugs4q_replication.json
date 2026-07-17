@@ -1,0 +1,346 @@
+{
+  "gpt-4o-mini": [
+    {
+      "id": "b4q-1",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-5",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-7",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-11",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-13",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-16",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-28",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-31",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-33",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-36",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-37",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-38",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    }
+  ],
+  "gpt-4o": [
+    {
+      "id": "b4q-1",
+      "kind": "crash",
+      "B0": false,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-5",
+      "kind": "output",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-7",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-11",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-13",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-16",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-28",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-31",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-33",
+      "kind": "crash",
+      "B0": false,
+      "B2": true,
+      "B4": false
+    },
+    {
+      "id": "b4q-36",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-37",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-38",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    }
+  ],
+  "claude-haiku-4-5": [
+    {
+      "id": "b4q-1",
+      "kind": "crash",
+      "B0": false,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-5",
+      "kind": "output",
+      "B0": true,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-7",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-11",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-13",
+      "kind": "crash",
+      "B0": false,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-16",
+      "kind": "output",
+      "B0": true,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-28",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-31",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-33",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": true
+    },
+    {
+      "id": "b4q-36",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-37",
+      "kind": "crash",
+      "B0": false,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-38",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    }
+  ],
+  "claude-sonnet-4-6": [
+    {
+      "id": "b4q-1",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-5",
+      "kind": "output",
+      "B0": true,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-7",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-11",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-13",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-16",
+      "kind": "output",
+      "B0": true,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-28",
+      "kind": "crash",
+      "B0": true,
+      "B2": true,
+      "B4": true
+    },
+    {
+      "id": "b4q-31",
+      "kind": "output",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-33",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-36",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-37",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    },
+    {
+      "id": "b4q-38",
+      "kind": "crash",
+      "B0": false,
+      "B2": false,
+      "B4": false
+    }
+  ]
+}

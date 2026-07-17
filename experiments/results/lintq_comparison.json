@@ -1,0 +1,57 @@
+{
+  "provenance": {
+    "lintq_commit": "481ca24",
+    "codeql": "2.11.2",
+    "db": "clean (40 programs, empty-venv extraction)",
+    "model_validity": "ql-qc-size (CircuitSize) fired -> LintQ modeled the circuits"
+  },
+  "lintq_default_highprec": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 32,
+    "TN": 8,
+    "precision": null,
+    "recall": 0.0,
+    "f1": null,
+    "per_family_recall": {
+      "clbit-size-mismatch": "0/4",
+      "deprecated-bind-parameters": "0/4",
+      "deprecated-execute-api": "0/4",
+      "endianness-bit-order": "0/4",
+      "missing-measurement": "0/4",
+      "qubit-index-oob": "0/4",
+      "removed-aer-import": "0/4",
+      "wrong-gate-or-param": "0/4"
+    },
+    "rules_fired": {},
+    "false_positives": []
+  },
+  "lintq_all_checkers": {
+    "TP": 11,
+    "FP": 3,
+    "FN": 21,
+    "TN": 5,
+    "precision": 0.786,
+    "recall": 0.344,
+    "f1": 0.478,
+    "per_family_recall": {
+      "clbit-size-mismatch": "3/4",
+      "deprecated-bind-parameters": "0/4",
+      "deprecated-execute-api": "0/4",
+      "endianness-bit-order": "4/4",
+      "missing-measurement": "0/4",
+      "qubit-index-oob": "3/4",
+      "removed-aer-import": "1/4",
+      "wrong-gate-or-param": "0/4"
+    },
+    "rules_fired": {
+      "ql-constant-classic-bit": 8,
+      "ql-unmeasurable-qubits": 6
+    },
+    "false_positives": [
+      "K3-statevector",
+      "K4-measure-all",
+      "K6-endian-correct"
+    ]
+  }
+}

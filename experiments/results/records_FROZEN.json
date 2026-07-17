@@ -1,0 +1,6994 @@
+[
+  {
+    "id": "A1-execute-bell",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "llm": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "union": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0004050731658935547,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0016231536865234375,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013494491577148438,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0004050731658935547,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0019450187683105469,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0019450187683105469,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2531571388244629,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2522590160369873,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2479569911956787,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2531571388244629,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.674475908279419,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 7.131809234619141,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.9114272594451904,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.674475908279419,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.2409539222717285,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.2409539222717285,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.2159459590911865,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.2159459590911865,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.6565871238708496,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.6565871238708496,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "A2-execute-ghz",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "llm": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "union": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00018405914306640625,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0003020763397216797,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002989768981933594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00018405914306640625,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0005691051483154297,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0005691051483154297,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2520110607147217,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2522239685058594,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2471632957458496,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2520110607147217,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.050195932388306,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.207510948181152,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.0605878829956055,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.050195932388306,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.3983879089355469,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.3983879089355469,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.064984083175659,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.064984083175659,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.254357099533081,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.254357099533081,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "A3-execute-superposition",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "llm": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "union": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002980232238769531,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015115737915039062,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015425682067871094,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002980232238769531,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002810955047607422,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002810955047607422,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2401580810546875,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23285818099975586,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2426910400390625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2401580810546875,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.045408010482788,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.976362943649292,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.282830238342285,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.045408010482788,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.226538896560669,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.226538896560669,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1654481887817383,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1654481887817383,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1134490966796875,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1134490966796875,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "A4-execute-2bell",
+    "category": "deprecated-execute-api",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "llm": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ],
+      "union": [
+        "deprecated-execute-api",
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00022602081298828125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.001260995864868164,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001289844512939453,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00022602081298828125,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.000247955322265625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.000247955322265625,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.24708819389343262,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23909711837768555,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23784279823303223,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.24708819389343262,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.081892251968384,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.039200067520142,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.966916084289551,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.081892251968384,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.4696900844573975,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.4696900844573975,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.339639186859131,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.339639186859131,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.5425820350646973,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.5425820350646973,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "B1-aer-import",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "removed-aer-import"
+      ],
+      "llm": [
+        "removed-aer-import"
+      ],
+      "union": [
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00027489662170410156,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015163421630859375,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00024771690368652344,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00027489662170410156,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00026702880859375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00026702880859375,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2527930736541748,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2524118423461914,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.24776124954223633,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2527930736541748,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.94442081451416,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.8800718784332275,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.098499059677124,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.94442081451416,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.2951970100402832,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.2951970100402832,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.9560649394989014,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.9560649394989014,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1828908920288086,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1828908920288086,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "B2-aer-qualified",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "removed-aer-import"
+      ],
+      "llm": [
+        "removed-aer-import"
+      ],
+      "union": [
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.508827209472656e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013184547424316406,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0003600120544433594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.508827209472656e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00025582313537597656,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00025582313537597656,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23693609237670898,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23058509826660156,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2317979335784912,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.23693609237670898,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.2961690425872803,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.710423707962036,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.5074303150177,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.2961690425872803,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.1976959705352783,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.1976959705352783,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.9455857276916504,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.9455857276916504,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.2608749866485596,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.2608749866485596,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "B3-aer-statevector",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "removed-aer-import"
+      ],
+      "llm": [
+        "removed-aer-import"
+      ],
+      "union": [
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00021123886108398438,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014495849609375,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014328956604003906,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00021123886108398438,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002779960632324219,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002779960632324219,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23791098594665527,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22246909141540527,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22916507720947266,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.23791098594665527,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.5607540607452393,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.1332690715789795,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.437108278274536,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.5607540607452393,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.2274608612060547,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.2274608612060547,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.0462899208068848,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.0462899208068848,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.925473928451538,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.925473928451538,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "B4-aer-import-w",
+    "category": "removed-aer-import",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "removed-aer-import"
+      ],
+      "llm": [
+        "removed-aer-import"
+      ],
+      "union": [
+        "removed-aer-import"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.7220458984375e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014328956604003906,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013375282287597656,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.7220458984375e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00026702880859375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00026702880859375,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23028182983398438,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.24336934089660645,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22109389305114746,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.23028182983398438,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.168966054916382,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.839789867401123,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.958031177520752,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.168966054916382,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.3101749420166016,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.3101749420166016,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.099435806274414,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.099435806274414,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.7549028396606445,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.7549028396606445,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "C1-cx-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "qubit-index-oob"
+      ],
+      "llm": [
+        "qubit-index-oob"
+      ],
+      "union": [
+        "qubit-index-oob"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.507469177246094e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013017654418945312,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001480579376220703,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.507469177246094e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00020122528076171875,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00020122528076171875,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2208421230316162,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22561883926391602,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.218278169631958,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2208421230316162,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.7229111194610596,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.725080728530884,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.361732244491577,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.7229111194610596,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.8321030139923096,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.8321030139923096,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.246692180633545,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.246692180633545,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.9822511672973633,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.9822511672973633,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "C2-h-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "qubit-index-oob"
+      ],
+      "llm": [
+        "qubit-index-oob"
+      ],
+      "union": [
+        "qubit-index-oob"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.602836608886719e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001499652862548828,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013113021850585938,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.602836608886719e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.00026106834411621094,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.00026106834411621094,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.22256922721862793,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.2110309600830078,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.20385003089904785,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.22256922721862793,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.258202791213989,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.281911849975586,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.498688697814941,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.258202791213989,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.17386794090271,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.17386794090271,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.8450710773468018,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.8450710773468018,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.189293146133423,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.189293146133423,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "C3-x-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "qubit-index-oob"
+      ],
+      "llm": [
+        "qubit-index-oob"
+      ],
+      "union": [
+        "qubit-index-oob"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 4.291534423828125e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.00024580955505371094,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.0001468658447265625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 4.291534423828125e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00045609474182128906,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00045609474182128906,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.24568390846252441,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23711371421813965,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2484569549560547,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.24568390846252441,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.621304035186768,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.893115758895874,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.056626081466675,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.621304035186768,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.9718799591064453,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.9718799591064453,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.329355001449585,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.329355001449585,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.3614659309387207,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.3614659309387207,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "C4-cz-oob",
+    "category": "qubit-index-oob",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "qubit-index-oob"
+      ],
+      "llm": [
+        "qubit-index-oob"
+      ],
+      "union": [
+        "qubit-index-oob"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.291534423828125e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001239776611328125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001308917999267578,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.291534423828125e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00023603439331054688,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00023603439331054688,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23596692085266113,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.24881792068481445,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23562002182006836,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.23596692085266113,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.7309651374816895,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.7062082290649414,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.9874801635742188,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.7309651374816895,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.8186700344085693,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.8186700344085693,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1901230812072754,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1901230812072754,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1962859630584717,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1962859630584717,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "D1-creg-small",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "clbit-size-mismatch"
+      ],
+      "llm": [
+        "clbit-size-mismatch"
+      ],
+      "union": [
+        "clbit-size-mismatch"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.125999450683594e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001380443572998047,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014781951904296875,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.125999450683594e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00024199485778808594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00024199485778808594,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21561717987060547,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2165849208831787,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21850299835205078,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.21561717987060547,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.03245210647583,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.04521918296814,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.317147970199585,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.03245210647583,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.047243595123291,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.047243595123291,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1203930377960205,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1203930377960205,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1617228984832764,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1617228984832764,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "D2-clbit-index",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "clbit-size-mismatch"
+      ],
+      "llm": [
+        "clbit-size-mismatch"
+      ],
+      "union": [
+        "clbit-size-mismatch"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.601478576660156e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00011920928955078125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014591217041015625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.601478576660156e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00022673606872558594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00022673606872558594,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.19665789604187012,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.19463491439819336,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.20636272430419922,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.19665789604187012,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.7910759449005127,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.7108821868896484,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.9972219467163086,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.7910759449005127,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.7687468528747559,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.7687468528747559,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.5826737880706787,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.5826737880706787,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.0776350498199463,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.0776350498199463,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "D3-creg-obj-small",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "clbit-size-mismatch"
+      ],
+      "llm": [
+        "clbit-size-mismatch"
+      ],
+      "union": [
+        "clbit-size-mismatch"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.38690185546875e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013780593872070312,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00012612342834472656,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.38690185546875e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00023603439331054688,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00023603439331054688,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2098090648651123,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21622085571289062,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21530795097351074,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2098090648651123,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.0454041957855225,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.8669791221618652,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.05872106552124,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.0454041957855225,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.485032796859741,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.485032796859741,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.2160627841949463,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.2160627841949463,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.630394220352173,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.630394220352173,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "D4-no-creg",
+    "category": "clbit-size-mismatch",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "clbit-size-mismatch"
+      ],
+      "llm": [],
+      "union": [
+        "clbit-size-mismatch"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.38690185546875e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013589859008789062,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014710426330566406,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.38690185546875e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002620220184326172,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002620220184326172,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2645249366760254,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23259806632995605,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23684000968933105,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2645249366760254,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.9799211025238037,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.997206687927246,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 7.948927879333496,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.9799211025238037,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.975066900253296,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.975066900253296,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.009770154953003,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.009770154953003,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.030441999435425,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.030441999435425,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "E1-no-measure",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "missing-measurement"
+      ],
+      "llm": [
+        "missing-measurement"
+      ],
+      "union": [
+        "missing-measurement"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.698204040527344e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014328956604003906,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013208389282226562,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.698204040527344e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002570152282714844,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002570152282714844,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2296450138092041,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22803401947021484,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23393893241882324,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2296450138092041,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.802577018737793,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.314479827880859,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.9489567279815674,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.802577018737793,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.3130249977111816,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.3130249977111816,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.027568817138672,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.027568817138672,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.0325229167938232,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.0325229167938232,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "E2-no-measure-ghz",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "missing-measurement"
+      ],
+      "llm": [
+        "missing-measurement"
+      ],
+      "union": [
+        "missing-measurement"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.316734313964844e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013113021850585938,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001537799835205078,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.316734313964844e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002570152282714844,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002570152282714844,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2335653305053711,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23381900787353516,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23257803916931152,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2335653305053711,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.159008026123047,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.2553911209106445,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.8761630058288574,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.159008026123047,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.241748094558716,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.241748094558716,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.2019479274749756,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.2019479274749756,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.066161870956421,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.066161870956421,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "E3-partial-measure",
+    "category": "missing-measurement",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.984306335449219e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013208389282226562,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013899803161621094,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.984306335449219e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002570152282714844,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002570152282714844,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23239421844482422,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23600411415100098,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21430087089538574,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.23239421844482422,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.08443808555603,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.587845325469971,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.714202880859375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.08443808555603,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1059460639953613,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1059460639953613,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.2209882736206055,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.2209882736206055,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.3397369384765625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.3397369384765625,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "E4-no-measure-super",
+    "category": "missing-measurement",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "missing-measurement"
+      ],
+      "llm": [
+        "missing-measurement"
+      ],
+      "union": [
+        "missing-measurement"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.008148193359375e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00010514259338378906,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00012874603271484375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.008148193359375e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002079010009765625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002079010009765625,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22219324111938477,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22873902320861816,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22071099281311035,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.22219324111938477,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.654301881790161,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.166619062423706,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.5269689559936523,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.654301881790161,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.994217872619629,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.994217872619629,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.7586181163787842,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.7586181163787842,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.8305001258850098,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.8305001258850098,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "F1-cz-for-cx",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.508827209472656e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014209747314453125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015091896057128906,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.508827209472656e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.00022292137145996094,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.00022292137145996094,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.21521472930908203,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.21018314361572266,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.23331713676452637,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.21521472930908203,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 9.08092188835144,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 6.036184072494507,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 12.430660963058472,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 9.08092188835144,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.2956600189208984,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.2956600189208984,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.303889036178589,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.303889036178589,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.8592541217803955,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.8592541217803955,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "F2-rx-degrees",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [
+        "wrong-gate-or-param"
+      ],
+      "union": [
+        "wrong-gate-or-param"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.626678466796875e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013709068298339844,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015878677368164062,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.626678466796875e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0005369186401367188,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0005369186401367188,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22986173629760742,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2257530689239502,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.23068809509277344,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.22986173629760742,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.8148369789123535,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.587348937988281,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.27123498916626,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.8148369789123535,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.7585909366607666,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.7585909366607666,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.054953098297119,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.054953098297119,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.1414620876312256,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.1414620876312256,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "F3-swapped-cx",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.507469177246094e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013780593872070312,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015807151794433594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.507469177246094e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.0002789497375488281,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.0002789497375488281,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.2347121238708496,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.23757576942443848,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.23762083053588867,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.2347121238708496,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 8.08272409439087,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 9.26185393333435,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 10.260318279266357,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 8.08272409439087,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.7157716751098633,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.7157716751098633,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.193169355392456,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.193169355392456,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.3486318588256836,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.3486318588256836,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "F4-missing-h",
+    "category": "wrong-gate-or-param",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.9114227294921875e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014781951904296875,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001399517059326172,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.9114227294921875e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.0002651214599609375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.0002651214599609375,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.22387003898620605,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.21987628936767578,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.23296213150024414,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 0.22387003898620605,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 4.4883811473846436,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 5.348652124404907,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 4.785320997238159,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 4.4883811473846436,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.0190787315368652,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.0190787315368652,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.865206003189087,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.865206003189087,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.9890928268432617,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.9890928268432617,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        }
+      }
+    }
+  },
+  {
+    "id": "G1-msb-read",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.103515625e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001678466796875,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00017189979553222656,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.103515625e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0004570484161376953,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0004570484161376953,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2337658405303955,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2303180694580078,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.20864510536193848,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2337658405303955,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.439152002334595,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.116601228713989,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.359588146209717,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.439152002334595,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.5967111587524414,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.5967111587524414,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 1.9438941478729248,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 1.9438941478729248,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.7980661392211914,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.7980661392211914,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "G2-label-order",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [
+        "endianness-bit-order"
+      ],
+      "union": [
+        "endianness-bit-order"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0019199848175048828,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.002748250961303711,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.002741098403930664,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0019199848175048828,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0029001235961914062,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0029001235961914062,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21118712425231934,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21182012557983398,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.20688271522521973,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.21118712425231934,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.452072858810425,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.34270167350769,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.499324083328247,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.452072858810425,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.7212040424346924,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.7212040424346924,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.3182640075683594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.3182640075683594,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.882575035095215,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.882575035095215,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "G3-qubit2-read",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.793571472167969e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001399517059326172,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013399124145507812,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.793571472167969e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0004899501800537109,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0004899501800537109,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22405505180358887,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2180938720703125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2289600372314453,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.22405505180358887,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 9.673249959945679,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 9.068213939666748,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 9.193527221679688,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 9.673249959945679,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.348729133605957,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.348729133605957,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 2.036403179168701,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": false,
+            "latency": 2.036403179168701,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.2678959369659424,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.2678959369659424,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "G4-marked-state",
+    "category": "endianness-bit-order",
+    "kind": "semantic",
+    "detection": {
+      "static": [],
+      "llm": [
+        "endianness-bit-order"
+      ],
+      "union": [
+        "endianness-bit-order"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 8.606910705566406e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00033974647521972656,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": false,
+              "latency": 0.00015211105346679688,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 8.606910705566406e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002989768981933594,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002989768981933594,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2174520492553711,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22491812705993652,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2260589599609375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2174520492553711,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.721434116363525,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.875399112701416,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 8.113809823989868,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.721434116363525,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.489285945892334,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.489285945892334,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.4067132472991943,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.4067132472991943,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.6646881103515625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.6646881103515625,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "H1-bind-params",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-bind-parameters"
+      ],
+      "llm": [
+        "deprecated-bind-parameters"
+      ],
+      "union": [
+        "deprecated-bind-parameters"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.1021575927734375e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013899803161621094,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00014591217041015625,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.1021575927734375e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002658367156982422,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002658367156982422,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21050190925598145,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21181416511535645,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21041393280029297,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.21050190925598145,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.207539796829224,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.909970283508301,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.5537168979644775,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.207539796829224,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": false,
+              "sem": false,
+              "latency": 2.0869109630584717,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": false,
+            "sem": false,
+            "latency": 2.0869109630584717,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.9101781845092773,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.9101781845092773,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.288827896118164,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 3.288827896118164,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "H2-bind-params-2",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-bind-parameters"
+      ],
+      "llm": [
+        "deprecated-bind-parameters"
+      ],
+      "union": [
+        "deprecated-bind-parameters"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 5.2928924560546875e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.000141143798828125,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0001499652862548828,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 5.2928924560546875e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002529621124267578,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002529621124267578,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2274339199066162,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.2162470817565918,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21549081802368164,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.2274339199066162,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 9.178223848342896,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.819037914276123,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.81129789352417,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 9.178223848342896,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": false,
+              "sem": false,
+              "latency": 5.420719146728516,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": false,
+            "sem": false,
+            "latency": 5.420719146728516,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.9244418144226074,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.9244418144226074,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.37487530708313,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.37487530708313,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "H3-bind-list",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-bind-parameters"
+      ],
+      "llm": [
+        "deprecated-bind-parameters"
+      ],
+      "union": [
+        "deprecated-bind-parameters"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 6.604194641113281e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00013685226440429688,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00035309791564941406,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 6.604194641113281e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00026988983154296875,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.00026988983154296875,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21258807182312012,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21523094177246094,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21289610862731934,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.21258807182312012,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.1872289180755615,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.758212089538574,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.5834929943084717,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.1872289180755615,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": false,
+              "sem": false,
+              "latency": 2.1367459297180176,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": false,
+            "sem": false,
+            "latency": 2.1367459297180176,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.8828160762786865,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.8828160762786865,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.0902068614959717,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.0902068614959717,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "H4-bind-3q",
+    "category": "deprecated-bind-parameters",
+    "kind": "crash",
+    "detection": {
+      "static": [
+        "deprecated-bind-parameters"
+      ],
+      "llm": [
+        "deprecated-bind-parameters"
+      ],
+      "union": [
+        "deprecated-bind-parameters"
+      ]
+    },
+    "repair": {
+      "claude-sonnet-4-6": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.792213439941406e-05,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00015282630920410156,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.00012874603271484375,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.792213439941406e-05,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B1": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.0002522468566894531,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.0002522468566894531,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21701693534851074,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.22408604621887207,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 0.21695494651794434,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 0.21701693534851074,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.382091999053955,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 4.165913105010986,
+              "calls": 1,
+              "iters": 1
+            },
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 3.822448253631592,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 4.382091999053955,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      },
+      "claude-haiku-4-5-20251001": {
+        "B0": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": false,
+              "sem": false,
+              "latency": 1.762470006942749,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": false,
+            "sem": false,
+            "latency": 1.762470006942749,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": false
+        },
+        "B2": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 2.030562162399292,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 2.030562162399292,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        },
+        "B3": {
+          "samples": [
+            {
+              "compile": true,
+              "ran": true,
+              "sem": true,
+              "latency": 1.9632809162139893,
+              "calls": 1,
+              "iters": 1
+            }
+          ],
+          "pass1": {
+            "compile": true,
+            "ran": true,
+            "sem": true,
+            "latency": 1.9632809162139893,
+            "calls": 1,
+            "iters": 1
+          },
+          "passk": true
+        }
+      }
+    }
+  },
+  {
+    "id": "K1-bell",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K2-ghz",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K3-statevector",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K4-measure-all",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K5-param",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K6-endian-correct",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K7-rotation",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  },
+  {
+    "id": "K8-3q-chain",
+    "category": "clean",
+    "kind": "clean",
+    "detection": {
+      "static": [],
+      "llm": [],
+      "union": []
+    }
+  }
+]

@@ -1,0 +1,454 @@
+{
+  "claude-sonnet-4-6": {
+    "A1-execute-bell": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.39130711555481,
+      "iters": 1
+    },
+    "A2-execute-ghz": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.317350149154663,
+      "iters": 1
+    },
+    "A3-execute-superposition": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.404162168502808,
+      "iters": 1
+    },
+    "A4-execute-2bell": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.485586881637573,
+      "iters": 1
+    },
+    "B1-aer-import": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.0981059074401855,
+      "iters": 1
+    },
+    "B2-aer-qualified": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.242284059524536,
+      "iters": 1
+    },
+    "B3-aer-statevector": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.3303141593933105,
+      "iters": 1
+    },
+    "B4-aer-import-w": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.5337841510772705,
+      "iters": 1
+    },
+    "C1-cx-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.9264559745788574,
+      "iters": 1
+    },
+    "C2-h-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.8924660682678223,
+      "iters": 1
+    },
+    "C3-x-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.916465997695923,
+      "iters": 1
+    },
+    "C4-cz-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.191256761550903,
+      "iters": 1
+    },
+    "D1-creg-small": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.161717891693115,
+      "iters": 1
+    },
+    "D2-clbit-index": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.7807438373565674,
+      "iters": 1
+    },
+    "D3-creg-obj-small": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.628093957901001,
+      "iters": 1
+    },
+    "D4-no-creg": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.8304219245910645,
+      "iters": 1
+    },
+    "E1-no-measure": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.724268674850464,
+      "iters": 1
+    },
+    "E2-no-measure-ghz": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.824958086013794,
+      "iters": 1
+    },
+    "E3-partial-measure": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.518226861953735,
+      "iters": 1
+    },
+    "E4-no-measure-super": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.3194408416748047,
+      "iters": 1
+    },
+    "F1-cz-for-cx": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 3.9681780338287354,
+      "iters": 1
+    },
+    "F2-rx-degrees": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.605381965637207,
+      "iters": 1
+    },
+    "F3-swapped-cx": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 8.568735837936401,
+      "iters": 1
+    },
+    "F4-missing-h": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.762253999710083,
+      "iters": 1
+    },
+    "G1-msb-read": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 10.689393043518066,
+      "iters": 1
+    },
+    "G2-label-order": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 5.348172187805176,
+      "iters": 1
+    },
+    "G3-qubit2-read": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 6.746575117111206,
+      "iters": 1
+    },
+    "G4-marked-state": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 6.277940988540649,
+      "iters": 1
+    },
+    "H1-bind-params": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.5550217628479004,
+      "iters": 1
+    },
+    "H2-bind-params-2": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.743377923965454,
+      "iters": 1
+    },
+    "H3-bind-list": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.3583450317382812,
+      "iters": 1
+    },
+    "H4-bind-3q": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 7.5162270069122314,
+      "iters": 1
+    }
+  },
+  "claude-haiku-4-5-20251001": {
+    "A1-execute-bell": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.9551210403442383,
+      "iters": 1
+    },
+    "A2-execute-ghz": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.9001610279083252,
+      "iters": 1
+    },
+    "A3-execute-superposition": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.072483777999878,
+      "iters": 1
+    },
+    "A4-execute-2bell": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.2019567489624023,
+      "iters": 1
+    },
+    "B1-aer-import": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.750920295715332,
+      "iters": 1
+    },
+    "B2-aer-qualified": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.8126769065856934,
+      "iters": 1
+    },
+    "B3-aer-statevector": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.8622169494628906,
+      "iters": 1
+    },
+    "B4-aer-import-w": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.8213541507720947,
+      "iters": 1
+    },
+    "C1-cx-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.9365849494934082,
+      "iters": 1
+    },
+    "C2-h-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 2.6378519535064697,
+      "iters": 1
+    },
+    "C3-x-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.9850358963012695,
+      "iters": 1
+    },
+    "C4-cz-oob": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 5.064103841781616,
+      "iters": 2
+    },
+    "D1-creg-small": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.0009820461273193,
+      "iters": 1
+    },
+    "D2-clbit-index": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.751176118850708,
+      "iters": 1
+    },
+    "D3-creg-obj-small": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.7499189376831055,
+      "iters": 1
+    },
+    "D4-no-creg": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.945862054824829,
+      "iters": 1
+    },
+    "E1-no-measure": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.6211879253387451,
+      "iters": 1
+    },
+    "E2-no-measure-ghz": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.7461230754852295,
+      "iters": 1
+    },
+    "E3-partial-measure": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.9919891357421875,
+      "iters": 1
+    },
+    "E4-no-measure-super": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.4582221508026123,
+      "iters": 1
+    },
+    "F1-cz-for-cx": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.7210190296173096,
+      "iters": 1
+    },
+    "F2-rx-degrees": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.253309965133667,
+      "iters": 1
+    },
+    "F3-swapped-cx": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.4329137802124023,
+      "iters": 1
+    },
+    "F4-missing-h": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 1.7448689937591553,
+      "iters": 1
+    },
+    "G1-msb-read": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.1506309509277344,
+      "iters": 1
+    },
+    "G2-label-order": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 4.2815210819244385,
+      "iters": 1
+    },
+    "G3-qubit2-read": {
+      "compile": true,
+      "ran": true,
+      "sem": false,
+      "latency": 2.084904909133911,
+      "iters": 1
+    },
+    "G4-marked-state": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.8666141033172607,
+      "iters": 1
+    },
+    "H1-bind-params": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 1.6351392269134521,
+      "iters": 1
+    },
+    "H2-bind-params-2": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 2.0578830242156982,
+      "iters": 1
+    },
+    "H3-bind-list": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.140794038772583,
+      "iters": 1
+    },
+    "H4-bind-3q": {
+      "compile": true,
+      "ran": true,
+      "sem": true,
+      "latency": 3.2107338905334473,
+      "iters": 1
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "pooled_B3_vs_B2 (debiasing beats naive, both models)": {
+    "n_pairs": 64,
+    "diff": 0.0938,
+    "ci": [
+      0.0312,
+      0.1719
+    ],
+    "mcnemar_p": 0.0312,
+    "treat_wins": 6,
+    "treat_losses": 0
+  },
+  "pooled_B2_vs_B0 (anchoring, both models)": {
+    "n_pairs": 64,
+    "diff": -0.0938,
+    "ci": [
+      -0.2188,
+      0.0312
+    ],
+    "mcnemar_p": 0.2101,
+    "treat_wins": 5,
+    "treat_losses": 11
+  },
+  "pooled_B3_vs_B0 (debiased vs unguided, both models)": {
+    "n_pairs": 64,
+    "diff": 0.0,
+    "ci": [
+      -0.0938,
+      0.0938
+    ],
+    "mcnemar_p": 1.0,
+    "treat_wins": 5,
+    "treat_losses": 5
+  },
+  "wrong_gate_sonnet": {
+    "B0": 4,
+    "B1": 1,
+    "B2": 1,
+    "B3": 2
+  },
+  "empty_finding_silent_instances": 5,
+  "of_those_B0_fix_B2_fail (sonnet)": 3
+}

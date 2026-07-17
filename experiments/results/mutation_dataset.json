@@ -1,0 +1,1599 @@
+{
+  "summary": {
+    "base_programs": 32,
+    "mutants_tried": 149,
+    "silent_bugs": 115,
+    "crash_bugs": 0,
+    "equivalent": 34
+  },
+  "silent_bugs": [
+    {
+      "base_id": "A1-execute-bell",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "A1-execute-bell",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "A1-execute-bell",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "A1-execute-bell",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cz(0, 1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.cz(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.ch(0, 1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.ch(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(1, 0)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A2-execute-ghz",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(2, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=7)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4053,
+          "000": 4139
+        }
+      }
+    },
+    {
+      "base_id": "A3-execute-superposition",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.x(0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=3)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 4038,
+          "0": 4154
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cz(0, 1)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.h(2); qc.cz(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.x(0); qc.cx(0, 1)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.x(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.ch(0, 1)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.h(2); qc.ch(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(1, 0)\nqc.h(2); qc.cx(2, 3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "A4-execute-2bell",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1)\nqc.h(2); qc.cx(3, 2)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=11)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1100": 2015,
+          "0011": 2078,
+          "0000": 2031,
+          "1111": 2068
+        }
+      }
+    },
+    {
+      "base_id": "B1-aer-import",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "B1-aer-import",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "B1-aer-import",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "B1-aer-import",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "B2-aer-qualified",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(range(3))\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=5)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "101": 1068,
+          "011": 1029,
+          "111": 1017,
+          "100": 1037,
+          "110": 1000,
+          "001": 1030,
+          "000": 1029,
+          "010": 982
+        }
+      }
+    },
+    {
+      "base_id": "B3-aer-statevector",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cz(0, 1)\nRESULT = Statevector(qc)\n",
+      "reference": {
+        "type": "state",
+        "data": [
+          [
+            0.7071067811865475,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "base_id": "B3-aer-statevector",
+      "op": "gate:cx->cy",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cy(0, 1)\nRESULT = Statevector(qc)\n",
+      "reference": {
+        "type": "state",
+        "data": [
+          [
+            0.7071067811865475,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "base_id": "B3-aer-statevector",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.x(0); qc.cx(0, 1)\nRESULT = Statevector(qc)\n",
+      "reference": {
+        "type": "state",
+        "data": [
+          [
+            0.7071067811865475,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "base_id": "B3-aer-statevector",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.ch(0, 1)\nRESULT = Statevector(qc)\n",
+      "reference": {
+        "type": "state",
+        "data": [
+          [
+            0.7071067811865475,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "base_id": "B3-aer-statevector",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit\nfrom qiskit.quantum_info import Statevector\nqc = QuantumCircuit(2)\nqc.h(0); qc.cx(1, 0)\nRESULT = Statevector(qc)\n",
+      "reference": {
+        "type": "state",
+        "data": [
+          [
+            0.7071067811865475,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "base_id": "B4-aer-import-w",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(0, 1)\nqc.cz(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 2772,
+          "11": 2684,
+          "01": 2736
+        }
+      }
+    },
+    {
+      "base_id": "B4-aer-import-w",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(0, 1)\nqc.ch(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 2772,
+          "11": 2684,
+          "01": 2736
+        }
+      }
+    },
+    {
+      "base_id": "B4-aer-import-w",
+      "op": "swap:ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(1, 0)\nqc.cx(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 2772,
+          "11": 2684,
+          "01": 2736
+        }
+      }
+    },
+    {
+      "base_id": "B4-aer-import-w",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(1.9106332362490186, 0)\nqc.ch(0, 1)\nqc.cx(0, 1)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 2772,
+          "11": 2684,
+          "01": 2736
+        }
+      }
+    },
+    {
+      "base_id": "B4-aer-import-w",
+      "op": "angle:ry",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.ry(0.5*(1.9106332362490186), 0)\nqc.ch(0, 1)\nqc.cx(1, 0)\nqc.x(0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=2)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 2772,
+          "11": 2684,
+          "01": 2736
+        }
+      }
+    },
+    {
+      "base_id": "C1-cx-oob",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "C1-cx-oob",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "C1-cx-oob",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "C1-cx-oob",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "C2-h-oob",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "011": 4076,
+          "000": 4116
+        }
+      }
+    },
+    {
+      "base_id": "C2-h-oob",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "011": 4076,
+          "000": 4116
+        }
+      }
+    },
+    {
+      "base_id": "C2-h-oob",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "011": 4076,
+          "000": 4116
+        }
+      }
+    },
+    {
+      "base_id": "C2-h-oob",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=9)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "011": 4076,
+          "000": 4116
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cz(0, 1); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cz(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2); qc.cz(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.x(0); qc.cx(0, 1); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.ch(0, 1); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.ch(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2); qc.ch(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(1, 0); qc.cx(1, 2); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(2, 1); qc.cx(2, 3)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C3-x-oob",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(4, 4)\nqc.h(0); qc.cx(0, 1); qc.cx(1, 2); qc.cx(3, 2)\nqc.x(3)\nqc.measure(range(4), range(4))\nsim = AerSimulator(seed_simulator=4)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "0111": 4119,
+          "1000": 4073
+        }
+      }
+    },
+    {
+      "base_id": "C4-cz-oob",
+      "op": "gate:cz->cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(1)\nqc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=6)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "010": 4166,
+          "000": 4026
+        }
+      }
+    },
+    {
+      "base_id": "C4-cz-oob",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(1)\nqc.cz(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=6)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "010": 4166,
+          "000": 4026
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cz(0, 1); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cz(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.ch(0, 1); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.ch(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(1, 0); qc.cx(1, 2)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D1-creg-small",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(2, 1)\nqc.measure([0, 1, 2], [0, 1, 2])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 4092,
+          "000": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D2-clbit-index",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cz(0, 1)\nqc.measure(0, 0)\nqc.measure(1, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D2-clbit-index",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0); qc.cx(0, 1)\nqc.measure(0, 0)\nqc.measure(1, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D2-clbit-index",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.ch(0, 1)\nqc.measure(0, 0)\nqc.measure(1, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D2-clbit-index",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(1, 0)\nqc.measure(0, 0)\nqc.measure(1, 1)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D3-creg-obj-small",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(2, 'c')\nqc = QuantumCircuit(q, c)\nqc.h(q[0]); qc.cz(q[0], q[1])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D3-creg-obj-small",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(2, 'c')\nqc = QuantumCircuit(q, c)\nqc.x(q[0]); qc.cx(q[0], q[1])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D3-creg-obj-small",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(2, 'c')\nqc = QuantumCircuit(q, c)\nqc.h(q[0]); qc.ch(q[0], q[1])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D3-creg-obj-small",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile\nfrom qiskit_aer import AerSimulator\nq = QuantumRegister(2, 'q')\nc = ClassicalRegister(2, 'c')\nqc = QuantumCircuit(q, c)\nqc.h(q[0]); qc.cx(q[1], q[0])\nqc.measure(q, c)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D4-no-creg",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D4-no-creg",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D4-no-creg",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "D4-no-creg",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E1-no-measure",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E1-no-measure",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E1-no-measure",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E1-no-measure",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cz(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cz(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.x(0); qc.cx(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.ch(0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.ch(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(1, 0); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E2-no-measure-ghz",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.cx(0, 1); qc.cx(2, 1)\nqc.measure(range(3), range(3))\nsim = AerSimulator(seed_simulator=8)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "000": 4139,
+          "111": 4053
+        }
+      }
+    },
+    {
+      "base_id": "E3-partial-measure",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E3-partial-measure",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E3-partial-measure",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E3-partial-measure",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0); qc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "E4-no-measure-super",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.x(0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=3)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 4038,
+          "0": 4154
+        }
+      }
+    },
+    {
+      "base_id": "F1-cz-for-cx",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F1-cz-for-cx",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F1-cz-for-cx",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F1-cz-for-cx",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F2-rx-degrees",
+      "op": "angle:rx",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(1, 1)\nqc.rx(0.5*(math.pi / 2), 0)\nqc.measure(0, 0)\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 4093,
+          "0": 4099
+        }
+      }
+    },
+    {
+      "base_id": "F3-swapped-cx",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F3-swapped-cx",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F3-swapped-cx",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F3-swapped-cx",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F4-missing-h",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F4-missing-h",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.x(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F4-missing-h",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "F4-missing-h",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "from qiskit import QuantumCircuit, transpile\nfrom qiskit_aer import AerSimulator\nqc = QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(qc, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "00": 4092,
+          "11": 4100
+        }
+      }
+    },
+    {
+      "base_id": "H1-bind-params",
+      "op": "angle:rx",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\ntheta = Parameter('theta')\nqc = QuantumCircuit(1, 1)\nqc.rx(0.5*(theta), 0)\nqc.measure(0, 0)\nbound = qc.assign_parameters({theta: math.pi})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H2-bind-params-2",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(a, 0); qc.ry(b, 1); qc.cz(0, 1)\nqc.measure([0, 1], [0, 1])\nbound = qc.assign_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "11": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H2-bind-params-2",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(a, 0); qc.ry(b, 1); qc.ch(0, 1)\nqc.measure([0, 1], [0, 1])\nbound = qc.assign_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "11": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H2-bind-params-2",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(a, 0); qc.ry(b, 1); qc.cx(1, 0)\nqc.measure([0, 1], [0, 1])\nbound = qc.assign_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "11": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H2-bind-params-2",
+      "op": "angle:ry",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\na = Parameter('a'); b = Parameter('b')\nqc = QuantumCircuit(2, 2)\nqc.ry(0.5*(a), 0); qc.ry(b, 1); qc.cx(0, 1)\nqc.measure([0, 1], [0, 1])\nbound = qc.assign_parameters({a: math.pi, b: 0.0})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "11": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H3-bind-list",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\nt = Parameter('t')\nqc = QuantumCircuit(1, 1)\nqc.x(0); qc.rz(t, 0); qc.h(0)\nqc.measure(0, 0)\nbound = qc.assign_parameters([math.pi])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H3-bind-list",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\nt = Parameter('t')\nqc = QuantumCircuit(1, 1)\nqc.h(0); qc.rz(t, 0); qc.x(0)\nqc.measure(0, 0)\nbound = qc.assign_parameters([math.pi])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H3-bind-list",
+      "op": "angle:rz",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\nt = Parameter('t')\nqc = QuantumCircuit(1, 1)\nqc.h(0); qc.rz(0.5*(t), 0); qc.h(0)\nqc.measure(0, 0)\nbound = qc.assign_parameters([math.pi])\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "1": 8192
+        }
+      }
+    },
+    {
+      "base_id": "H4-bind-3q",
+      "op": "gate:cx->cz",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.crx(p, 0, 1); qc.cz(1, 2)\nqc.measure(range(3), range(3))\nbound = qc.assign_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 2043,
+          "001": 2050,
+          "000": 4099
+        }
+      }
+    },
+    {
+      "base_id": "H4-bind-3q",
+      "op": "gate:h->x",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.x(0); qc.crx(p, 0, 1); qc.cx(1, 2)\nqc.measure(range(3), range(3))\nbound = qc.assign_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 2043,
+          "001": 2050,
+          "000": 4099
+        }
+      }
+    },
+    {
+      "base_id": "H4-bind-3q",
+      "op": "gate:cx->ch",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.crx(p, 0, 1); qc.ch(1, 2)\nqc.measure(range(3), range(3))\nbound = qc.assign_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 2043,
+          "001": 2050,
+          "000": 4099
+        }
+      }
+    },
+    {
+      "base_id": "H4-bind-3q",
+      "op": "swap:cx",
+      "kind": "silent",
+      "buggy": "import math\nfrom qiskit import QuantumCircuit, transpile\nfrom qiskit.circuit import Parameter\nfrom qiskit_aer import AerSimulator\np = Parameter('p')\nqc = QuantumCircuit(3, 3)\nqc.h(0); qc.crx(p, 0, 1); qc.cx(2, 1)\nqc.measure(range(3), range(3))\nbound = qc.assign_parameters({p: math.pi / 2})\nsim = AerSimulator(seed_simulator=1234)\nRESULT = sim.run(transpile(bound, sim), shots=8192).result().get_counts()\n",
+      "reference": {
+        "type": "counts",
+        "data": {
+          "111": 2043,
+          "001": 2050,
+          "000": 4099
+        }
+      }
+    }
+  ]
+}
