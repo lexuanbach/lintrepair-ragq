@@ -14,10 +14,11 @@ leaking the benchmark's defect taxonomy.
 
 The offline reproduction below runs entirely from the frozen result files and needs
 **no API keys, no network, and not the response cache**. The raw LLM response cache
-(~10.9k entries) is distributed separately as the `.llm_cache.tar.gz` **release
-asset** to keep the clone lean; download it into this directory and run
-`tar xzf .llm_cache.tar.gz` (or let `reproduce.sh` unpack it) only if you want to
-**re-run** model calls with cache hits instead of live API calls.
+(~10.9k entries) is distributed separately as the `llm_cache.tar.gz` **release asset**
+(see the repo's Releases) to keep the clone lean; download it into this directory and
+run `tar xzf llm_cache.tar.gz` (it unpacks to `.llm_cache/`, or let `reproduce.sh` do
+it) only if you want to **re-run** model calls with cache hits instead of live API
+calls.
 
 ## Paper ↔ artifact map
 

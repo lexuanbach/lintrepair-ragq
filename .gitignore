@@ -20,3 +20,4 @@ env/
 # require the cache; download and extract the asset only to RE-run model calls.
 .llm_cache/
 .llm_cache.tar.gz
+llm_cache.tar.gz

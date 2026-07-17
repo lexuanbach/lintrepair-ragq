@@ -6,11 +6,13 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-# The frozen result files below are sufficient for offline reproduction. The raw
-# LLM response cache ships compressed (.llm_cache.tar.gz, ~10.9k entries); unpack it
-# if present so that experiment RE-runs get cache hits instead of live API calls.
-if [ ! -d .llm_cache ] && [ -f .llm_cache.tar.gz ]; then
-  echo "[0/5] extracting .llm_cache.tar.gz ..."; tar xzf .llm_cache.tar.gz
+# The frozen result files below are sufficient for offline reproduction. The raw LLM
+# response cache (~10.9k entries) is a GitHub release asset, llm_cache.tar.gz; if you
+# downloaded it here, unpack it so experiment RE-runs get cache hits, not live calls.
+if [ ! -d .llm_cache ]; then
+  for t in llm_cache.tar.gz .llm_cache.tar.gz; do
+    [ -f "$t" ] && { echo "[0/5] extracting $t ..."; tar xzf "$t"; break; }
+  done
 fi
 
 req() { [ -f "experiments/results/$1" ] || { echo "MISSING: results/$1 (cannot reproduce offline)"; exit 1; }; }
