@@ -10,7 +10,8 @@ import hashlib, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 INCLUDE_DIRS = ["lrq", "benchmark", "experiments"]
-INCLUDE_TOP = ["README.md", "requirements.txt", "reproduce.sh", "make_manifest.py"]
+INCLUDE_TOP = ["README.md", "SUPPLEMENT.md", "requirements.txt", "reproduce.sh",
+               "check_consistency.py", "make_manifest.py"]
 SKIP = {"__pycache__", ".llm_cache", ".venv"}
 
 def sha256(path):

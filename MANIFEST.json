@@ -1,8 +1,12 @@
 {
   "files": {
     "README.md": {
-      "bytes": 11000,
-      "sha256": "1e8be090957a28aac8bc27c0130f092dd0adfacaa9b4d52d8f7232fe17e4e9a7"
+      "bytes": 11382,
+      "sha256": "4bfe1cf514a31c5598177468e0ccb6abbb23ac9f05ed0c8c9c458eee00aee77c"
+    },
+    "SUPPLEMENT.md": {
+      "bytes": 7400,
+      "sha256": "0d9e3e692cf7c3efd37fa82d6d9822bcd9a72c14bba601de78d3e1724f50e3cc"
     },
     "benchmark/benchmark.json": {
       "bytes": 38611,
@@ -19,6 +23,10 @@
     "benchmark/instances.py": {
       "bytes": 32877,
       "sha256": "a53b21576b69aa688e385d5244568036f4456f6f0bec2ffec3f62ce344e71f04"
+    },
+    "check_consistency.py": {
+      "bytes": 2725,
+      "sha256": "8f67bbf885cadcde711fc15d02461fb151f11ce346f9cd796a00d6c64bcaf9ef"
     },
     "experiments/aggregate_models.py": {
       "bytes": 5524,
@@ -269,12 +277,12 @@
       "sha256": "b4bdd128a3d35194eb26eebaa5e36302fa2ae040643c144d77874f712ae83cee"
     },
     "make_manifest.py": {
-      "bytes": 2308,
-      "sha256": "a14f7d223f6bd6feefd7bcb303c374637f360d0af0976a7c2900f29de33666a1"
+      "bytes": 2364,
+      "sha256": "d424bcd252711a0fa05f91227a49f8dfae68eb8dfc579d4b042171065bc217ab"
     },
     "reproduce.sh": {
-      "bytes": 1364,
-      "sha256": "ae2e897012a9b11b60811b93fbcb9926b22a7f2f83065b1673cf1eb7da1eb05c"
+      "bytes": 1787,
+      "sha256": "f29cbc4850f3f88620cb63287e53ece4083ab9cdb51599a0e9b8543b3979f155"
     },
     "requirements.txt": {
       "bytes": 831,
@@ -282,5 +290,5 @@
     }
   },
   "llm_cache_entries": 10884,
-  "n_files": 70
+  "n_files": 72
 }

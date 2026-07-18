@@ -30,8 +30,8 @@ script that writes it:
 | Paper element | Numbers | Result file | Written by |
 |---|---|---|---|
 | **RQ1 detection** (`tab:detection`) | static 0.719 / LLM 0.781 / union 0.812 recall @ 1.000 precision, 0 FP | `summary_FROZEN.json` (`detection`) | `run_all.py` |
-| LintQ head-to-head | 0.000 (high-prec) / 0.344 (all checkers) | `lintq_comparison.json` | `experiments/lintq/` |
-| Detector-capability robustness | Haiku detector union 0.875 | `detector_sensitivity.json` | `run_detector_sensitivity.py` |
+| LintQ head-to-head | 0.000 (high-prec) / 0.344 (all checkers) | `lintq_comparison.json` | `experiments/lintq/score_lintq.py` |
+| Detector-config robustness (Sonnet/Haiku) | B2static / B2noassert repair pass@1 | `detector_sensitivity.json` | `run_detector_sensitivity.py` |
 | **RQ2 crossover** (`tab:cross` + `fig:crossover`, 18 models) | per-model B0–B4, ρ̂; pooled +0.160 [.109,.214], 168/76 | `cross_model.json` (`rows`,`pooled`) | `aggregate_models.py` |
 | Interaction (Fig 4 line) | slope −0.47, 95% CI [−0.68,−0.19], R²=0.40, crossing ρ̂≈0.84 | `interaction_and_losses.json` | `run_revision_interaction.py` |
 | Stratified by kind | crash +0.258 [.196,.321]; silent −0.093 [−.173,−.012] | `revision_analyses.json` (`stratified_by_kind`) | `run_revision_analyses.py` |
