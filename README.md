@@ -3,6 +3,9 @@
 Artifact for *"When Grounding Hurts: Retrieval and Validation for LLM Repair of
 Quantum Programs"* (ICECCS 2026, anonymized for review).
 
+**Manuscript:** [Read or download the extended version (PDF, 21 pages)](extended-version.pdf).
+The PDF includes the formal model, validator-loop analysis, and full per-model results.
+
 Every number, table, and figure in the paper is produced by the scripts here over
 **real executions**; nothing is hand-entered. The repair study spans **18 models**
 across four providers (OpenAI, Google, Anthropic, and eleven open-weight models via
@@ -81,8 +84,8 @@ script that writes it:
   paper-vs-artifact consistency assertion (fail-closed).
 - `check_consistency.py` — asserts every headline manuscript number equals
   `paper_numbers.json` (exits non-zero on any drift).
-- `make_manifest.py` — writes `MANIFEST.json` (SHA-256 + size of all 70 source/result
-  files); `--check` re-verifies it for tamper evidence.
+- `make_manifest.py` — writes `MANIFEST.json` (SHA-256 + size of the source/result files and
+  extended manuscript PDF); `--check` re-verifies it for tamper evidence.
 
 ## Repair configurations (B0–B4)
 
@@ -177,7 +180,7 @@ or an immutable provider revision, so exact hosted-model snapshots are not pinne
 
 ## Extended version and added analyses
 
-- `extended-version.pdf` — the 21-page extended version of the ICECCS 2026 paper,
+- [extended-version.pdf](extended-version.pdf) — the 21-page extended version of the ICECCS 2026 paper,
   with the formal model, the validator-loop analysis (RQ4), and the full per-model
   tables that the 11-page camera-ready omits. Both versions carry the same
   corrections; the camera-ready is the version of record.

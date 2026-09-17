@@ -1,8 +1,8 @@
 {
   "files": {
     "README.md": {
-      "bytes": 12303,
-      "sha256": "5569aee054076ff4f95a15927dc3f784a98da627a2ae719d7a8927adc7573f20"
+      "bytes": 12534,
+      "sha256": "a0374df6389774a0718542d5cfb2c073875ebfee3d71078a67eac58117e46d5a"
     },
     "SUPPLEMENT.md": {
       "bytes": 7400,
@@ -256,6 +256,10 @@
       "bytes": 5082,
       "sha256": "023c1e9329b27efd9c550656643a29bba0ca1e8fe8702d49aa2fdb92f11b7d3f"
     },
+    "extended-version.pdf": {
+      "bytes": 420005,
+      "sha256": "84f7b28bf6ba9b7efebd21e1341d156d5bfd785b83d43ffa4028afcb28e711eb"
+    },
     "lrq/__init__.py": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -285,8 +289,8 @@
       "sha256": "b4bdd128a3d35194eb26eebaa5e36302fa2ae040643c144d77874f712ae83cee"
     },
     "make_manifest.py": {
-      "bytes": 2364,
-      "sha256": "d424bcd252711a0fa05f91227a49f8dfae68eb8dfc579d4b042171065bc217ab"
+      "bytes": 2408,
+      "sha256": "dd9aa028c2d9dddc727f571e37285fa5efd2b51d61b877413c22af87cf473123"
     },
     "reproduce.sh": {
       "bytes": 1787,
@@ -298,5 +302,5 @@
     }
   },
   "llm_cache_entries": 10884,
-  "n_files": 74
+  "n_files": 75
 }

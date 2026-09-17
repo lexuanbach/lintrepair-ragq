@@ -1,5 +1,5 @@
 """Write a tamper-evident manifest of the artifact: SHA-256 + byte size of every
-source file and every result JSON (the .llm_cache is summarised by entry count,
+source file, result JSON, and extended manuscript PDF (the .llm_cache is summarised by entry count,
 not hashed line-by-line, since it is large). Output: MANIFEST.json.
 
 Run:  python make_manifest.py   (no API, no network)
@@ -11,7 +11,7 @@ import hashlib, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 INCLUDE_DIRS = ["lrq", "benchmark", "experiments"]
 INCLUDE_TOP = ["README.md", "SUPPLEMENT.md", "requirements.txt", "reproduce.sh",
-               "check_consistency.py", "make_manifest.py"]
+               "check_consistency.py", "make_manifest.py", "extended-version.pdf"]
 SKIP = {"__pycache__", ".llm_cache", ".venv"}
 
 def sha256(path):
