@@ -135,7 +135,7 @@
   },
   "capability_corr": {
     "pearson": -0.629,
-    "spearman": -0.543,
+    "spearman": -0.538,
     "n_models": 18
   },
   "expanded_negatives": {
@@ -143,6 +143,7 @@
     "matched_fixes": 32,
     "clean_idioms": 8,
     "union_false_positives": 0,
+    "specificity": 1.0,
     "precision": 1.0
   }
 }

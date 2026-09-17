@@ -37,7 +37,7 @@ script that writes it:
 | Stratified by kind | crash +0.258 [.196,.321]; silent −0.093 [−.173,−.012] | `revision_analyses.json` (`stratified_by_kind`) | `run_revision_analyses.py` |
 | Loss breakdown (153/15 wins, 48/76 high-cap) | wins/losses by kind × capability | `interaction_and_losses.json` | `run_revision_interaction.py` |
 | Per-family pooled (B0→B2) | removed-aer 0.32→0.81, … | `revision_analyses.json` (`family_level_pooled`) | `run_revision_analyses.py` |
-| Capability correlation | Pearson −0.629, Spearman −0.543 | `revision_analyses.json` (`capability_corr`) | `run_revision_analyses.py` |
+| Capability correlation | Pearson −0.629, Spearman −0.538 | `revision_analyses.json` (`capability_corr`) | `run_revision_analyses.py` |
 | Migration-script baseline | 10/32, API-removal only | `scripted_baseline.json` | `run_scripted_baseline.py` |
 | **RQ3** debiasing | B3−B2 +0.012 p=.48; B4−B2 −0.030 p=.04; B3−B4 +0.042 p<.001 | `cross_model.json` (`pooled`) | `aggregate_models.py` |
 | **§ Dissection** matched controls | B0filler drop (Sonnet 9→6, Haiku 7→3) | `anchoring_controls.json` | `run_anchoring_controls.py` |

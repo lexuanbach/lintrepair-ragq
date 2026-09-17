@@ -2,7 +2,7 @@
   "files": {
     "README.md": {
       "bytes": 12303,
-      "sha256": "b4b97c4927078243928f595861335581a0c6481e475582c5e687ab559dd3009b"
+      "sha256": "5569aee054076ff4f95a15927dc3f784a98da627a2ae719d7a8927adc7573f20"
     },
     "SUPPLEMENT.md": {
       "bytes": 7400,
@@ -134,7 +134,7 @@
     },
     "experiments/results/paper_numbers.json": {
       "bytes": 15858,
-      "sha256": "7f627207612915b48c7c39ca3fbd174674040fcd7b4d3d1dcf0eed63e8872df5"
+      "sha256": "0bc2265e8f4c3281ac0bc914b9009ef37e007d15bf32ea0886b2f080c0307ab0"
     },
     "experiments/results/partial_correlation.json": {
       "bytes": 558,
@@ -161,8 +161,8 @@
       "sha256": "d8e1d7c403f0254780767e011f1c0723bece4039da7c504797b083a32555456a"
     },
     "experiments/results/revision_analyses.json": {
-      "bytes": 2695,
-      "sha256": "72ef0dea9e07ec29eefd2b2a1cb5a952d4d4fc2a75c7da6ec8d195afe86f3d97"
+      "bytes": 2719,
+      "sha256": "549d28ecf9c4aa3d9eb3815e287dfb61ba86de707d7ec6211b4e55367f54ca09"
     },
     "experiments/results/scripted_baseline.json": {
       "bytes": 4471,
@@ -245,8 +245,8 @@
       "sha256": "6f3579dc8cc5f5870ddebbae21fc502d8ded0e1e626373229f106a19ae2bbe3f"
     },
     "experiments/run_revision_analyses.py": {
-      "bytes": 5920,
-      "sha256": "e5ab4f71d34a949e563b4d14a422fee64d526f32d72404f1ad01c33a8617592c"
+      "bytes": 6025,
+      "sha256": "9d3cd8d01a9254ce1952ad121d2e2261fa43820f0e47f5c44542934eb05a3a7c"
     },
     "experiments/run_revision_interaction.py": {
       "bytes": 4325,

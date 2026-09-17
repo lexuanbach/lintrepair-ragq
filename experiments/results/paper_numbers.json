@@ -111,7 +111,7 @@
     },
     "capability_correlation": {
       "pearson": -0.629,
-      "spearman": -0.543,
+      "spearman": -0.538,
       "n_models": 18
     },
     "interaction_regression": {

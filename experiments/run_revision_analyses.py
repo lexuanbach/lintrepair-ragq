@@ -82,9 +82,10 @@ def main():
     rhos = [r for *_, r in MODELS]
     gains = [sum(sem(mk, src, "B2", i) for i in ids) / len(ids) - sum(sem(mk, src, "B0", i) for i in ids) / len(ids)
              for mk, src, _ in MODELS]
-    rk = sorted(rhos); gk = sorted(gains)
+    def avg_rank(xs):  # tied values share the mean of their positions
+        srt = sorted(xs); return [(srt.index(x) + len(srt) - srt[::-1].index(x) - 1) / 2 for x in xs]
     out["capability_corr"] = {"pearson": round(pearson(rhos, gains), 3),
-                              "spearman": round(pearson([rk.index(x) for x in rhos], [gk.index(x) for x in gains]), 3),
+                              "spearman": round(pearson(avg_rank(rhos), avg_rank(gains)), 3),
                               "n_models": len(MODELS)}
     # expanded negatives (uses cached LLM-detector calls)
     try:
