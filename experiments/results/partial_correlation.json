@@ -1,0 +1,18 @@
+{
+ "_provenance": "experiments/run_partial_correlation.py, recomputed from records.json and models_extra.json; rho-hat is exact k/32.",
+ "n_models": 18,
+ "n_semantic_programs": 9,
+ "resampling_unit": "model",
+ "n_boot": 10000,
+ "seed": 0,
+ "interval_rule": "percentile (2.5%, 97.5%)",
+ "degenerate_resamples_discarded": 0,
+ "corr_rho_base": 0.8344168760048978,
+ "corr_base_gain": -0.8219238542941625,
+ "corr_rho_gain": -0.8644118130138543,
+ "partial_corr_rho_gain_given_base": -0.568878023025888,
+ "ci95": [
+  -0.8485996489203793,
+  -0.17034800056685762
+ ]
+}

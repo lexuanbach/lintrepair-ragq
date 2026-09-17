@@ -21,3 +21,16 @@ env/
 .llm_cache/
 .llm_cache.tar.gz
 llm_cache.tar.gz
+
+# Never publish reviewer material or internal assessments (author instruction)
+review*.md
+rebuttal*.md
+audit*.md
+AUDIT.md
+astral*.md
+codex-audit*.md
+fable*.md
+acceptance*.md
+CAMERA_READY.md
+FRAMEWORK_REVISION.md
+copyright*.docx

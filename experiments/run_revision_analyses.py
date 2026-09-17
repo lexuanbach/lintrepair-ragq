@@ -7,6 +7,7 @@ LLM-detector calls on negatives are cached), all numbers added in revision:
   - stratified_kind: pooled B2-B0 split by crash vs semantic defects (paired test)
   - capability_corr: Pearson/Spearman of base capability rho-hat vs grounding gain
   - expanded_negatives: detection false positives on 8 clean + 32 matched human fixes
+    (reports specificity = TN/N- and precision = TP/(TP+FP) separately)
 
 Writes results/revision_analyses.json.
 """
@@ -96,8 +97,12 @@ def main():
         for _, src in negs:
             if {f.category for f in detect(src)} | {f.category for f in llm_detect(src, model=SON)}:
                 ufp += 1
+        # 1 - FP/N- is specificity (TN / N-), not precision (TP / (TP+FP)).
+        # Both are reported so neither name is misapplied downstream.
         out["expanded_negatives"] = {"n_negatives": len(negs), "matched_fixes": 32, "clean_idioms": 8,
-                                     "union_false_positives": ufp, "precision": round(1 - ufp / len(negs), 3)}
+                                     "union_false_positives": ufp,
+                                     "specificity": round(1 - ufp / len(negs), 3),
+                                     "precision": (round(26 / (26 + ufp), 3) if (26 + ufp) else None)}
     except Exception as e:
         out["expanded_negatives"] = {"error": str(e)[:120]}
     json.dump(out, open(f"{R}/revision_analyses.json", "w"), indent=2)

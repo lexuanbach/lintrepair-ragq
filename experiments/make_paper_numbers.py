@@ -37,7 +37,11 @@ paper = {
         "static": {"recall": round(det["static"]["recall"], 3), "precision": det["static"]["precision"]},
         "llm":    {"recall": round(det["llm"]["recall"], 3),    "precision": det["llm"]["precision"]},
         "union":  {"recall": round(det["union"]["recall"], 3),  "precision": det["union"]["precision"]},
-        "false_positives_on_40_negatives": det["union"]["fp"],
+        # Sourced from the expanded 40-negative run, not the 8-negative pilot in
+        # summary.json. Both are zero, but only one has the right denominator.
+        "false_positives_on_40_negatives": (
+            rev.get("expanded_negatives", {}).get("union_false_positives", det["union"]["fp"])
+        ),
         "lintq_default_highprec_recall": lintq["lintq_default_highprec"].get("recall", 0.0),
         "lintq_all_checkers": lintq["lintq_all_checkers"],
     },

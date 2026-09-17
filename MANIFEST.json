@@ -1,8 +1,8 @@
 {
   "files": {
     "README.md": {
-      "bytes": 11382,
-      "sha256": "4bfe1cf514a31c5598177468e0ccb6abbb23ac9f05ed0c8c9c458eee00aee77c"
+      "bytes": 12303,
+      "sha256": "b4b97c4927078243928f595861335581a0c6481e475582c5e687ab559dd3009b"
     },
     "SUPPLEMENT.md": {
       "bytes": 7400,
@@ -49,8 +49,8 @@
       "sha256": "1d6e7c7d2c72075971087173c7ae920caf79e53a36c89ee0a68360bbd97eb709"
     },
     "experiments/make_paper_numbers.py": {
-      "bytes": 4660,
-      "sha256": "bb0abfb9a46aad8e9c3ba56868531f9399b629aaf7bf5b0c74ad6539d0cb9626"
+      "bytes": 4908,
+      "sha256": "7b379b4904d7ffd54473456f3db1841e4912ad9b99a33a0545ed44811bad12f6"
     },
     "experiments/mine_realbugs.py": {
       "bytes": 11170,
@@ -135,6 +135,10 @@
     "experiments/results/paper_numbers.json": {
       "bytes": 15858,
       "sha256": "7f627207612915b48c7c39ca3fbd174674040fcd7b4d3d1dcf0eed63e8872df5"
+    },
+    "experiments/results/partial_correlation.json": {
+      "bytes": 558,
+      "sha256": "a052af9d4fa5563abb19f3cc7ae41978c8b91a103b2add246a055b41740496be"
     },
     "experiments/results/passk.json": {
       "bytes": 4675,
@@ -228,6 +232,10 @@
       "bytes": 4581,
       "sha256": "58d25ed7a23dd284cde4257f3e229e3bc72a08ccc41acd7fd07c343831a02a14"
     },
+    "experiments/run_partial_correlation.py": {
+      "bytes": 5303,
+      "sha256": "056777e5cc0234912a16cba03ffb9aa6069657e602fad459effc94d85ed68bb5"
+    },
     "experiments/run_passk.py": {
       "bytes": 1985,
       "sha256": "dd4fb03c4d87f385e2f22011e59f18a39af02ef6b7f9745372371c64b9a54f03"
@@ -237,8 +245,8 @@
       "sha256": "6f3579dc8cc5f5870ddebbae21fc502d8ded0e1e626373229f106a19ae2bbe3f"
     },
     "experiments/run_revision_analyses.py": {
-      "bytes": 5560,
-      "sha256": "45c05a0fbcf7ff969e54dfa2358b63d9cdec625c70c82d0c3f7293557afca487"
+      "bytes": 5920,
+      "sha256": "e5ab4f71d34a949e563b4d14a422fee64d526f32d72404f1ad01c33a8617592c"
     },
     "experiments/run_revision_interaction.py": {
       "bytes": 4325,
@@ -290,5 +298,5 @@
     }
   },
   "llm_cache_entries": 10884,
-  "n_files": 72
+  "n_files": 74
 }

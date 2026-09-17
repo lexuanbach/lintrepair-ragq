@@ -174,3 +174,18 @@ validator budget m = 3; retrieval top-k = 4.
 reproduces from cache only. Each cache entry stores the response text, token counts,
 model id, and per-call latency; it does not currently record a wall-clock timestamp
 or an immutable provider revision, so exact hosted-model snapshots are not pinned.
+
+## Extended version and added analyses
+
+- `extended-version.pdf` — the 21-page extended version of the ICECCS 2026 paper,
+  with the formal model, the validator-loop analysis (RQ4), and the full per-model
+  tables that the 11-page camera-ready omits. Both versions carry the same
+  corrections; the camera-ready is the version of record.
+- `experiments/run_partial_correlation.py` — reproduces the headroom-adjusted
+  partial correlation reported in the paper from `records.json` and
+  `models_extra.json`, writing `experiments/results/partial_correlation.json`.
+  It documents every choice that moves the number: model-level resampling
+  (n=18), exact rho-hat = k/32, 10,000 resamples, seed 0, percentile interval.
+- `experiments/results/revision_analyses.json` reports `expanded_negatives`
+  as `specificity` (TN/N-) alongside a standard `precision`; earlier releases
+  labelled the specificity value `precision`.
